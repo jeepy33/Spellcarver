@@ -5,29 +5,9 @@ var one = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var two = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var three = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
-# primordial runes
-var fire = [0,1,0,0,1,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0]
-var water = [1,0,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,1,1,0]
-var air = [0,1,1,0,0,0,0,1,1,0,0,1,0,0,1,1,1,1,0,1,0]
-var earth = [0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1]
 
-# control runes
-var low_potency = [0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,0,1,1,1,1]
-var high_potency = [0,0,1,1,1,1,0,1,0,0,0,1,1,1,0,1,0,0,1,1,1]
-var low_duration = [0,0,0,0,0,0,1,0,1,0,0,1,0,0,1,1,1,0,1,0,0]
-var high_duration = [1,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,0,0,0,0,0]
 
-# arcane runes
-var light = [0,1,1,0,1,0,0,1,1,1,0,1,1,0,0,1,1,0,1,1,0]
-var shadow = [0,0,1,0,1,1,0,1,1,0,0,1,1,1,0,1,1,0,1,1,1]
-var time = [0,0,1,1,0,0,0,1,0,0,1,1,0,0,0,1,0,1,1,0,0]
-var space = [1,0,1,0,0,0,1,1,0,0,0,1,0,0,1,1,0,0,1,0,0]
-
-# form runes
-var gas = [0,1,0,0,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,0,0]
-var liquid = [0,1,0,0,1,1,1,0,1,0,1,1,0,0,1,1,0,0,0,0,0]
-var solid = [0,1,0,1,1,1,1,0,1,0,1,1,1,0,1,1,0,1,1,0,0]
-var formless = [1,1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0]
+var tome_page = 2
 
 var runes = []
 
@@ -41,61 +21,87 @@ func combine_runes(rune1, rune2):
 
 func check_runes():
 	runes = []
-	if(zero == fire):
+	var r = [Global.blank]
+	if(zero == Global.fire):
 		runes.append("Fire")
-	elif(zero == water):
+		r.append(Global.fire)
+	elif(zero == Global.water):
 		runes.append("Water")
-	elif(zero == air):
+		r.append(Global.water)
+	elif(zero == Global.air):
 		runes.append("Air")
-	elif(zero == earth):
+		r.append(Global.air)
+	elif(zero == Global.earth):
 		runes.append("Earth")
+		r.append(Global.earth)
 	else:
 		if (arr_sum(zero) != 0):
 			runes = []
-			return
-	if(one == low_potency):
+			return [Global.blank]
+	if(one == Global.low_potency):
 		runes.append("Low Potency")
-	elif(one == high_potency):
+		r.append(Global.low_potency)
+	elif(one == Global.high_potency):
 		runes.append("High Potency")
-	elif(one == low_duration):
+		r.append(Global.high_potency)
+	elif(one == Global.low_duration):
 		runes.append("Low Duration")
-	elif(one == high_duration):
+		r.append(Global.low_duration)
+	elif(one == Global.high_duration):
 		runes.append("High Duration")
+		r.append(Global.high_duration)
 	else:
 		if (arr_sum(one) != 0):
 			runes = []
-			return
-	if(two == light):
+			return [Global.blank]
+	if(two == Global.light):
 		runes.append("Light")
-	elif(two == shadow):
+		r.append(Global.light)
+	elif(two == Global.shadow):
 		runes.append("Shadow")
-	elif(two == time):
+		r.append(Global.shadow)
+	elif(two == Global.time):
 		runes.append("Time")
-	elif(two == space):
+		r.append(Global.time)
+	elif(two == Global.space):
 		runes.append("Space")
+		r.append(Global.space)
 	else:
 		if (arr_sum(two) != 0):
 			runes = []
-			return
-	if(three == gas):
+			return [Global.blank]
+	if(three == Global.gas):
 		runes.append("Gas")
-	elif(three == liquid):
+		r.append(Global.gas)
+	elif(three == Global.liquid):
 		runes.append("Liquid")
-	elif(three == solid):
+		r.append(Global.liquid)
+	elif(three == Global.solid):
 		runes.append("Solid")
-	elif(three == formless):
+		r.append(Global.solid)
+	elif(three == Global.formless):
 		runes.append("Formless")
+		r.append(Global.formless)
 	else:
 		if (arr_sum(three) != 0):
 			runes = []
-			return
+			return [Global.blank]
+	return r
 			
 @onready var rune_carved = $Runes
 @onready var text = $Label
+@onready var guide = $rune_guide
 @onready var quad_zero = $rune_guide/quadrant_zero
 @onready var quad_one = $rune_guide/quadrant_one
 @onready var quad_two = $rune_guide/quadrant_two
 @onready var quad_three = $rune_guide/quadrant_three
+@onready var tome_button = $journal
+@onready var tome_open = $TomeOpen
+@onready var next = $TomeOpen/next
+@onready var prev = $TomeOpen/prev
+@onready var left_rune = $TomeOpen/left_rune
+@onready var right_rune = $TomeOpen/right_rune
+@onready var rune_result = $rune_result
 
 
 
@@ -111,6 +117,9 @@ func _ready():
 		b.pressed.connect(self._on_Button2_toggled.bind(b))
 	for b in quad_three.get_children():
 		b.pressed.connect(self._on_Button3_toggled.bind(b))
+	
+	guide.rotate(deg_to_rad(-90*Global.master_quadrant))
+	_set_result_runes(check_runes())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -144,7 +153,7 @@ func arr_sum(arr: Array) -> int:
 
 
 func _on_carve_rune_pressed():
-	check_runes()
+	_set_result_runes(check_runes())
 	rune_carved.text = arr_to_string(runes)
 
 
@@ -162,3 +171,102 @@ func _on_reset_pressed():
 	one = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 	two = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 	three = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+	_set_result_runes(check_runes())
+
+
+func _on_journal_pressed():
+	tome_button.visible = false;
+	tome_open.visible = true;
+	_set_tome_runes(Global.tome_contents[tome_page-2],Global.tome_contents[tome_page-1])
+
+
+func _on_close_pressed():
+	tome_button.visible = true;
+	tome_open.visible = false;
+
+
+func _on_next_pressed():
+	if (tome_page < Global.tome_pages):
+		tome_page += 2
+		_set_tome_runes(Global.tome_contents[tome_page-2],Global.tome_contents[tome_page-1])
+		if (!prev.visible):
+			prev.visible = true;
+		if (tome_page >= Global.tome_pages):
+			next.visible = false;
+
+func _on_prev_pressed():
+	if (tome_page > 2):
+		tome_page -= 2
+		_set_tome_runes(Global.tome_contents[tome_page-2],Global.tome_contents[tome_page-1])
+		if (!next.visible):
+			next.visible = true;
+		if (tome_page <= 2):
+			prev.visible = false
+		
+func _set_tome_runes(left, right):
+	if (arr_sum(left) == 0):
+		left_rune.visible = false
+	else:
+		left_rune.visible = true
+	if (arr_sum(right) == 0):
+		right_rune.visible = false
+	else:
+		right_rune.visible = true
+	
+	var leftQ = 0
+	var rightQ = 0
+	if (Global.primordial.find(left,0) >= 0):
+		leftQ = (0 + 4-Global.master_quadrant)%4
+	elif (Global.control.find(left,0) >= 0):
+		leftQ = (1 + 4-Global.master_quadrant)%4
+	elif (Global.arcane.find(left,0) >= 0):
+		leftQ = (2 + 4-Global.master_quadrant)%4
+	elif (Global.form.find(left,0) >= 0):
+		leftQ = (3 + 4-Global.master_quadrant)%4
+	
+	if (Global.primordial.find(right,0) >= 0):
+		rightQ = (0 + 4-Global.master_quadrant)%4
+	elif (Global.control.find(right,0) >= 0):
+		rightQ = (1 + 4-Global.master_quadrant)%4
+	elif (Global.arcane.find(right,0) >= 0):
+		rightQ = (2 + 4-Global.master_quadrant)%4
+	elif (Global.form.find(right,0) >= 0):
+		rightQ = (3 + 4-Global.master_quadrant)%4
+	
+	for q in left_rune.get_children():
+		for b in q.get_children():
+			if(left[int(b.name.dedent())] == 1 && (q == left_rune.get_child(leftQ) || left == Global.full)):
+				b.visible = true;
+			else:
+				b.visible = false;
+				
+	for q in right_rune.get_children():
+		for b in q.get_children():
+			if(right[int(b.name.dedent())] == 1 && (q == right_rune.get_child(rightQ)|| right == Global.full)):
+				b.visible = true;
+			else:
+				b.visible = false;
+				
+func _set_result_runes(r):
+	for left in r:
+		if (arr_sum(left) == 0):
+			rune_result.visible = false
+		else:
+			rune_result.visible = true
+		
+		var leftQ = 0
+		if (Global.primordial.find(left,0) >= 0):
+			leftQ = (0 + 4-Global.master_quadrant)%4
+		elif (Global.control.find(left,0) >= 0):
+			leftQ = (1 + 4-Global.master_quadrant)%4
+		elif (Global.arcane.find(left,0) >= 0):
+			leftQ = (2 + 4-Global.master_quadrant)%4
+		elif (Global.form.find(left,0) >= 0):
+			leftQ = (3 + 4-Global.master_quadrant)%4
+		
+		for q in rune_result.get_children():
+			for b in q.get_children():
+				if(left[int(b.name.dedent())] == 1 && (q == rune_result.get_child(leftQ) || left == Global.full)):
+					b.visible = true;
+				else:
+					b.visible = false;

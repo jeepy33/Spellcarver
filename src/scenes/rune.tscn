@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://cmn7vicc57ix0"]
+[gd_scene load_steps=79 format=3 uid="uid://cmn7vicc57ix0"]
 
 [ext_resource type="Script" path="res://src/scripts/rune.gd" id="1_0thqm"]
 [ext_resource type="Texture2D" uid="uid://dfx4aw7h3l5i1" path="res://assets/runecarvings/rune_bg.png" id="2_0ccug"]
@@ -69,9 +69,1177 @@
 [ext_resource type="Texture2D" uid="uid://b18ax7w4cvupw" path="res://assets/UI/reset_button_up.png" id="67_rx3k1"]
 [ext_resource type="Texture2D" uid="uid://qah8dv2x7o48" path="res://assets/UI/reset_button_down.png" id="68_yeqxi"]
 [ext_resource type="Texture2D" uid="uid://blrfpoqs2ofkc" path="res://assets/UI/reset_button_hover.png" id="69_psh7d"]
+[ext_resource type="Texture2D" uid="uid://bqh2u66wl34n2" path="res://assets/UI/tome.png" id="70_hvfns"]
+[ext_resource type="Texture2D" uid="uid://crknx8mxfjr1q" path="res://assets/UI/tome_highlight.png" id="71_1ujv1"]
+[ext_resource type="Texture2D" uid="uid://01kjaoo2rsry" path="res://assets/UI/tome_open.png" id="72_bn2nd"]
+[ext_resource type="Texture2D" uid="uid://8ny2r18bxjdl" path="res://assets/UI/close_button_up.png" id="73_8ixic"]
+[ext_resource type="Texture2D" uid="uid://c1kje8mnpgaug" path="res://assets/UI/close_button_down.png" id="74_utn4w"]
+[ext_resource type="Texture2D" uid="uid://d17s5quays5v4" path="res://assets/UI/close_button_hover.png" id="75_jgo8u"]
+[ext_resource type="Texture2D" uid="uid://fq1qpogtef3h" path="res://assets/UI/arrow_button_up.png" id="76_4rvvb"]
+[ext_resource type="Texture2D" uid="uid://cu61rd218iyqs" path="res://assets/UI/arrow_button_down.png" id="77_cb57p"]
+[ext_resource type="Texture2D" uid="uid://bm5185os6pvnu" path="res://assets/UI/arrow_button_hover.png" id="78_xunk0"]
 
 [node name="rune" type="Node"]
 script = ExtResource("1_0thqm")
+
+[node name="rune_result" type="Sprite2D" parent="."]
+position = Vector2(1658, 469)
+scale = Vector2(0.458287, 0.457819)
+
+[node name="quadrant_zero" type="Control" parent="rune_result"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -788.0
+offset_top = -446.0
+offset_right = -788.0
+offset_bottom = -446.0
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="rune_result/quadrant_zero"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="rune_result/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_one" type="Control" parent="rune_result"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 426.0
+offset_top = -785.0
+offset_right = 426.0
+offset_bottom = -785.0
+rotation = 1.5708
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="rune_result/quadrant_one"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="rune_result/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_two" type="Control" parent="rune_result"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 765.0
+offset_top = 428.0
+offset_right = 765.0
+offset_bottom = 428.0
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="rune_result/quadrant_two"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="rune_result/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_three" type="Control" parent="rune_result"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -449.0
+offset_top = 767.0
+offset_right = -449.0
+offset_bottom = 767.0
+rotation = 4.71239
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="rune_result/quadrant_three"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="rune_result/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
 
 [node name="rune_guide" type="Sprite2D" parent="."]
 position = Vector2(995, 464)
@@ -364,7 +1532,7 @@ mouse_default_cursor_shape = 2
 toggle_mode = true
 texture_normal = ExtResource("44_c73jl")
 texture_pressed = ExtResource("43_6khby")
-texture_click_mask = ExtResource("40_2xubw")
+texture_click_mask = ExtResource("34_buxif")
 
 [node name="quadrant_one" type="Control" parent="rune_guide"]
 layout_mode = 3
@@ -653,7 +1821,7 @@ mouse_default_cursor_shape = 2
 toggle_mode = true
 texture_normal = ExtResource("44_c73jl")
 texture_pressed = ExtResource("43_6khby")
-texture_click_mask = ExtResource("40_2xubw")
+texture_click_mask = ExtResource("34_buxif")
 
 [node name="quadrant_two" type="Control" parent="rune_guide"]
 layout_mode = 3
@@ -942,7 +2110,7 @@ mouse_default_cursor_shape = 2
 toggle_mode = true
 texture_normal = ExtResource("44_c73jl")
 texture_pressed = ExtResource("43_6khby")
-texture_click_mask = ExtResource("40_2xubw")
+texture_click_mask = ExtResource("34_buxif")
 
 [node name="quadrant_three" type="Control" parent="rune_guide"]
 layout_mode = 3
@@ -1231,9 +2399,10 @@ mouse_default_cursor_shape = 2
 toggle_mode = true
 texture_normal = ExtResource("44_c73jl")
 texture_pressed = ExtResource("43_6khby")
-texture_click_mask = ExtResource("40_2xubw")
+texture_click_mask = ExtResource("34_buxif")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = 1487.0
 offset_top = 752.0
 offset_right = 1731.0
@@ -1241,10 +2410,10 @@ offset_bottom = 879.0
 text = "label"
 
 [node name="Runes" type="Label" parent="."]
-offset_left = 1412.0
-offset_top = 625.0
-offset_right = 1904.0
-offset_bottom = 752.0
+offset_left = 1408.0
+offset_top = 668.0
+offset_right = 1900.0
+offset_bottom = 795.0
 text = "label"
 horizontal_alignment = 1
 
@@ -1269,6 +2438,2457 @@ texture_normal = ExtResource("67_rx3k1")
 texture_pressed = ExtResource("68_yeqxi")
 texture_hover = ExtResource("69_psh7d")
 
+[node name="journal" type="TextureButton" parent="."]
+offset_left = -116.0
+offset_top = 182.0
+offset_right = 973.0
+offset_bottom = 1431.0
+scale = Vector2(0.5, 0.5)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("70_hvfns")
+texture_pressed = ExtResource("71_1ujv1")
+texture_hover = ExtResource("71_1ujv1")
+
+[node name="TomeOpen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1076, 582)
+rotation = 0.0698132
+scale = Vector2(0.9168, 0.873505)
+texture = ExtResource("72_bn2nd")
+
+[node name="close" type="TextureButton" parent="TomeOpen"]
+offset_left = 510.244
+offset_top = -530.928
+offset_right = 626.244
+offset_bottom = -402.928
+rotation = -0.0750492
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("73_8ixic")
+texture_pressed = ExtResource("74_utn4w")
+texture_hover = ExtResource("75_jgo8u")
+
+[node name="next" type="TextureButton" parent="TomeOpen"]
+offset_left = 516.85
+offset_top = 250.372
+offset_right = 994.85
+offset_bottom = 503.372
+rotation = -0.0750492
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("76_4rvvb")
+texture_pressed = ExtResource("77_cb57p")
+texture_hover = ExtResource("78_xunk0")
+
+[node name="prev" type="TextureButton" parent="TomeOpen"]
+visible = false
+offset_left = -691.397
+offset_top = 441.298
+offset_right = -213.397
+offset_bottom = 694.298
+rotation = -3.21664
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("76_4rvvb")
+texture_pressed = ExtResource("77_cb57p")
+texture_hover = ExtResource("78_xunk0")
+
+[node name="leftpage" type="RichTextLabel" parent="TomeOpen"]
+offset_left = -844.0
+offset_top = -297.0
+offset_right = -247.0
+offset_bottom = 193.0
+rotation = -0.0994838
+
+[node name="rightpage" type="RichTextLabel" parent="TomeOpen"]
+offset_left = -49.3709
+offset_top = -363.587
+offset_right = 547.629
+offset_bottom = 126.413
+rotation = -0.0244346
+
+[node name="left_rune" type="Sprite2D" parent="TomeOpen"]
+position = Vector2(-372.436, -305.474)
+rotation = -0.0732614
+scale = Vector2(0.5, 0.524)
+skew = 0.00673509
+
+[node name="quadrant_zero" type="Control" parent="TomeOpen/left_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -788.0
+offset_top = -446.0
+offset_right = -788.0
+offset_bottom = -446.0
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/left_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_one" type="Control" parent="TomeOpen/left_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 426.0
+offset_top = -785.0
+offset_right = 426.0
+offset_bottom = -785.0
+rotation = 1.5708
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/left_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_two" type="Control" parent="TomeOpen/left_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 765.0
+offset_top = 428.0
+offset_right = 765.0
+offset_bottom = 428.0
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/left_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_three" type="Control" parent="TomeOpen/left_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -449.0
+offset_top = 767.0
+offset_right = -449.0
+offset_bottom = 767.0
+rotation = 4.71239
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/left_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="right_rune" type="Sprite2D" parent="TomeOpen"]
+position = Vector2(81.399, -353.703)
+rotation = -0.0732614
+scale = Vector2(0.5, 0.524)
+skew = 0.00673509
+
+[node name="quadrant_zero" type="Control" parent="TomeOpen/right_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -788.0
+offset_top = -446.0
+offset_right = -788.0
+offset_bottom = -446.0
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/right_rune/quadrant_zero"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_one" type="Control" parent="TomeOpen/right_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 426.0
+offset_top = -785.0
+offset_right = 426.0
+offset_bottom = -785.0
+rotation = 1.5708
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/right_rune/quadrant_one"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_two" type="Control" parent="TomeOpen/right_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 765.0
+offset_top = 428.0
+offset_right = 765.0
+offset_bottom = 428.0
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/right_rune/quadrant_two"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="quadrant_three" type="Control" parent="TomeOpen/right_rune"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -449.0
+offset_top = 767.0
+offset_right = -449.0
+offset_bottom = 767.0
+rotation = 4.71239
+scale = Vector2(1.5, 1.5)
+
+[node name="0" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 112.0
+offset_right = 355.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1ew1b")
+texture_pressed = ExtResource("3_2xyg3")
+texture_click_mask = ExtResource("4_vbxy1")
+
+[node name="1" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 533.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6_buw1q")
+texture_pressed = ExtResource("5_h0eax")
+texture_click_mask = ExtResource("5_jgogp")
+
+[node name="2" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 339.0
+offset_top = 113.0
+offset_right = 406.0
+offset_bottom = 178.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("8_p8nnl")
+texture_pressed = ExtResource("7_d36h8")
+texture_click_mask = ExtResource("10_r0cgf")
+
+[node name="3" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 267.0
+offset_top = 165.0
+offset_right = 407.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("10_57q8e")
+texture_pressed = ExtResource("9_k32ci")
+texture_click_mask = ExtResource("13_77ks8")
+
+[node name="4" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 532.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("12_n36rh")
+texture_pressed = ExtResource("11_uifuh")
+texture_click_mask = ExtResource("16_shoao")
+
+[node name="5" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 515.0
+offset_top = 41.0
+offset_right = 559.0
+offset_bottom = 153.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_2v3un")
+texture_pressed = ExtResource("13_15875")
+texture_click_mask = ExtResource("19_y55gj")
+
+[node name="6" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 426.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("16_ot4bw")
+texture_pressed = ExtResource("15_rqp2k")
+texture_click_mask = ExtResource("22_ws5ol")
+
+[node name="7" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+texture_filter = 4
+clip_contents = true
+layout_mode = 0
+offset_left = 391.0
+offset_top = 167.0
+offset_right = 435.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("18_5rbn1")
+texture_pressed = ExtResource("17_rwqxx")
+texture_click_mask = ExtResource("25_18vps")
+
+[node name="8" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 411.0
+offset_top = 142.0
+offset_right = 531.0
+offset_bottom = 197.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("20_e0em1")
+texture_pressed = ExtResource("19_kjc0r")
+texture_click_mask = ExtResource("28_nll76")
+
+[node name="9" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 511.0
+offset_top = 142.0
+offset_right = 555.0
+offset_bottom = 195.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("22_wu8gu")
+texture_pressed = ExtResource("21_p5r8t")
+texture_click_mask = ExtResource("31_n8yhi")
+
+[node name="10" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 409.0
+offset_top = 188.0
+offset_right = 453.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_0m0d0")
+texture_pressed = ExtResource("23_w8ftv")
+texture_click_mask = ExtResource("34_buxif")
+
+[node name="11" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 188.0
+offset_right = 474.0
+offset_bottom = 249.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("26_cc8nr")
+texture_pressed = ExtResource("25_31ktd")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="12" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 414.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 210.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("28_vso7b")
+texture_pressed = ExtResource("27_5e4wq")
+texture_click_mask = ExtResource("40_2xubw")
+
+[node name="13" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 186.0
+offset_right = 553.0
+offset_bottom = 218.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("30_k2yxk")
+texture_pressed = ExtResource("29_141cj")
+texture_click_mask = ExtResource("43_hh7m8")
+
+[node name="14" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 432.0
+offset_top = 231.0
+offset_right = 476.0
+offset_bottom = 298.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("32_063tg")
+texture_pressed = ExtResource("31_cjo3x")
+texture_click_mask = ExtResource("46_45qmb")
+
+[node name="15" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 458.0
+offset_top = 233.0
+offset_right = 502.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("34_0xbbr")
+texture_pressed = ExtResource("33_heshm")
+texture_click_mask = ExtResource("49_1vsyq")
+
+[node name="16" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 457.0
+offset_top = 207.0
+offset_right = 528.0
+offset_bottom = 248.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("36_jgo7h")
+texture_pressed = ExtResource("35_lvik8")
+texture_click_mask = ExtResource("52_u5gfv")
+
+[node name="17" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 430.0
+offset_top = 250.0
+offset_right = 493.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("38_piumy")
+texture_pressed = ExtResource("37_tb77x")
+texture_click_mask = ExtResource("55_jln6i")
+
+[node name="18" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 241.0
+offset_right = 530.0
+offset_bottom = 301.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("40_nojhv")
+texture_pressed = ExtResource("39_efdw0")
+texture_click_mask = ExtResource("58_t3lb4")
+
+[node name="19" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 209.0
+offset_right = 527.0
+offset_bottom = 276.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("42_u8s00")
+texture_pressed = ExtResource("41_q68vf")
+texture_click_mask = ExtResource("37_kavwb")
+
+[node name="20" type="TextureButton" parent="TomeOpen/right_rune/quadrant_three"]
+clip_contents = true
+layout_mode = 0
+offset_left = 514.0
+offset_top = 207.0
+offset_right = 558.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("44_c73jl")
+texture_pressed = ExtResource("43_6khby")
+texture_click_mask = ExtResource("34_buxif")
+
+[connection signal="toggled" from="rune_result/quadrant_one/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_one/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_two/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_result/quadrant_three/20" to="." method="_on_20_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_one/0" to="." method="_on_0_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_one/1" to="." method="_on_1_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_one/2" to="." method="_on_2_toggled"]
@@ -1334,3 +4954,133 @@ texture_hover = ExtResource("69_psh7d")
 [connection signal="toggled" from="rune_guide/quadrant_three/20" to="." method="_on_20_toggled"]
 [connection signal="pressed" from="carve_rune" to="." method="_on_carve_rune_pressed"]
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="journal" to="." method="_on_journal_pressed"]
+[connection signal="pressed" from="TomeOpen/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="TomeOpen/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="TomeOpen/prev" to="." method="_on_prev_pressed"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_one/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_two/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="TomeOpen/left_rune/quadrant_three/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_one/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_two/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/20" to="." method="_on_20_toggled"]
