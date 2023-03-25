@@ -1,41 +1,85 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlrmoyjnyoklc"]
+[gd_scene load_steps=11 format=3 uid="uid://dlrmoyjnyoklc"]
 
 [ext_resource type="Script" path="res://src/scripts/shop.gd" id="1_hwtng"]
 [ext_resource type="PackedScene" uid="uid://cj1x2tjlhwp4x" path="res://src/scenes/player.tscn" id="1_lu3kv"]
 [ext_resource type="Script" path="res://src/scripts/rune_table.gd" id="2_g1li3"]
 [ext_resource type="Texture2D" uid="uid://di1env1xef8hl" path="res://assets/placeholders/rune_table.png" id="2_l0513"]
 [ext_resource type="Texture2D" uid="uid://c5afnqufanpfl" path="res://assets/placeholders/rune_table_hightlight.png" id="5_gmpsj"]
+[ext_resource type="Texture2D" uid="uid://cmqmvd57pcjou" path="res://assets/placeholders/register.png" id="6_m2y38"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca1wf"]
-size = Vector2(256, 153)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eeak"]
+radius = 73.5
+height = 216.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpq5x"]
+size = Vector2(305, 226)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c13xr"]
+size = Vector2(114, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xefip"]
+size = Vector2(211, 170.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hwtng")
 
 [node name="player" parent="." instance=ExtResource("1_lu3kv")]
 position = Vector2(81, 120)
-speed = 200
+speed = 300
 
 [node name="rune_table" type="StaticBody2D" parent="."]
 position = Vector2(1015, 168)
 script = ExtResource("2_g1li3")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="rune_table"]
+[node name="table" type="Sprite2D" parent="rune_table"]
 z_index = -1
 texture = ExtResource("2_l0513")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rune_table"]
 position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_ca1wf")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0eeak")
 
 [node name="highlight" type="Sprite2D" parent="rune_table"]
 position = Vector2(0, -75)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_gmpsj")
 
+[node name="Area2D" type="Area2D" parent="rune_table"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rune_table/Area2D"]
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_xpq5x")
+
 [node name="player_start" type="Marker2D" parent="."]
 position = Vector2(585, 359)
 
-[connection signal="touching" from="player" to="." method="_on_player_touching"]
+[node name="cash_register" type="StaticBody2D" parent="."]
+position = Vector2(124, 381)
+metadata/_edit_group_ = true
 
+[node name="register" type="Sprite2D" parent="cash_register"]
+texture = ExtResource("6_m2y38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cash_register"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_c13xr")
+
+[node name="highlight" type="Sprite2D" parent="cash_register"]
+position = Vector2(0, -47.9)
+scale = Vector2(0.465574, 0.567382)
+texture = ExtResource("5_gmpsj")
+
+[node name="Area2D" type="Area2D" parent="cash_register"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cash_register/Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_xefip")
+debug_color = Color(0.592157, 0.443137, 0.827451, 0.419608)
+
+[connection signal="touching" from="player" to="." method="_on_player_touching"]
+[connection signal="body_entered" from="rune_table/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="rune_table/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="cash_register/Area2D" to="." method="_on_register_body_entered"]
+[connection signal="body_exited" from="cash_register/Area2D" to="." method="_on_register_body_exited"]
