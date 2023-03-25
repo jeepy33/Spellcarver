@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dlrmoyjnyoklc"]
+[gd_scene load_steps=37 format=3 uid="uid://dlrmoyjnyoklc"]
 
 [ext_resource type="Script" path="res://src/scripts/shop.gd" id="1_hwtng"]
 [ext_resource type="PackedScene" uid="uid://cj1x2tjlhwp4x" path="res://src/scenes/player.tscn" id="1_lu3kv"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c5iusm86jg3xn" path="res://src/scenes/npc.tscn" id="9_vfvce"]
 [ext_resource type="Texture2D" uid="uid://d3iq8o5ngwbq7" path="res://assets/store/floor.png" id="11_3ey0b"]
 [ext_resource type="Texture2D" uid="uid://cenv6iff5yqsr" path="res://assets/store/counter.png" id="12_e6nj4"]
+[ext_resource type="Script" path="res://src/scripts/jobDesc.gd" id="13_ba10p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eeak"]
 radius = 81.5
@@ -298,6 +299,30 @@ shape = SubResource("SegmentShape2D_xtrh0")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("SegmentShape2D_bwyro")
+
+[node name="jobDesc" type="VBoxContainer" parent="."]
+offset_left = 122.0
+offset_top = 110.0
+offset_right = 363.0
+offset_bottom = 335.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("13_ba10p")
+
+[node name="Label" type="Label" parent="jobDesc"]
+layout_mode = 2
+text = "Current Job"
+horizontal_alignment = 1
+
+[node name="description" type="RichTextLabel" parent="jobDesc"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "You do not have any jobs right now.
+"
+
+[node name="jobsCompleted" type="Label" parent="jobDesc"]
+layout_mode = 2
+text = "Number of Jobs Completed: "
 
 [connection signal="leaveNPC" from="." to="NPCPath/NPCPathFollow" method="_on_node_2d_leave_npc"]
 [connection signal="leaveNPC" from="." to="NPCPath/NPCPathFollow/npc" method="_on_node_2d_leave_npc"]
