@@ -38,3 +38,4 @@ texture = ExtResource("5_gmpsj")
 position = Vector2(585, 359)
 
 [connection signal="touching" from="player" to="." method="_on_player_touching"]
+
