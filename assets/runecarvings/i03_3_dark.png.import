@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dnuyan7v7bpx2"
+path="res://.godot/imported/i03_3_dark.png-88e5bae1b84630f3a1f803a7bd8f7c8b.res"
+
+[deps]
+
+source_file="res://assets/runecarvings/i03_3_dark.png"
+dest_files=["res://.godot/imported/i03_3_dark.png-88e5bae1b84630f3a1f803a7bd8f7c8b.res"]
+
+[params]
+
+create_from=1
+threshold=0.5
