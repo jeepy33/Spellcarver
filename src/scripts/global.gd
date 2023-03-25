@@ -5,7 +5,7 @@ var curJob = 0
 # set in talkscene, NPCPathFollow, used in npc
 var acceptedJob = false
 
-var tome_pages = 4
+var tome_pages = 16
 
 var master_quadrant = 0
 
@@ -41,8 +41,8 @@ var primordial = [fire,water,air,earth]
 var control = [low_potency,high_potency,low_duration,high_duration]
 var arcane = [light,shadow,time,space]
 var form = [gas,liquid,solid,formless]
-#                                     blank                                          fire                                   low potency                    
-var tome_contents = [full,fire,low_potency,water]
+				
+var tome_contents = [full,fire,water,air,earth,low_potency,high_potency,low_duration,high_duration,light,shadow,time,space,gas,liquid,solid]
 
 
 var taskDone = false

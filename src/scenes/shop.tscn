@@ -1,5 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d328gsf3iugak"]
-
+[gd_scene load_steps=39 format=3 uid="uid://d328gsf3iugak"]
 
 [ext_resource type="Script" path="res://src/scripts/shop.gd" id="1_hwtng"]
 [ext_resource type="PackedScene" uid="uid://cj1x2tjlhwp4x" path="res://src/scenes/player.tscn" id="1_lu3kv"]
@@ -14,12 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://c5iusm86jg3xn" path="res://src/scenes/npc.tscn" id="9_vfvce"]
 [ext_resource type="Texture2D" uid="uid://d3iq8o5ngwbq7" path="res://assets/store/floor.png" id="11_3ey0b"]
 [ext_resource type="Texture2D" uid="uid://cenv6iff5yqsr" path="res://assets/store/counter.png" id="12_e6nj4"]
-
-[ext_resource type="Script" path="res://src/scripts/jobDesc.gd" id="13_ba10p"]
-
 [ext_resource type="Texture2D" uid="uid://cwwlhg54fl5sk" path="res://assets/UI/gold_coin.png" id="13_0j4cc"]
+[ext_resource type="Script" path="res://src/scripts/jobDesc.gd" id="13_ba10p"]
 [ext_resource type="Texture2D" uid="uid://bdmvnnksgd1rd" path="res://assets/UI/controls.png" id="14_cwbxr"]
-
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eeak"]
 radius = 81.5
@@ -281,7 +277,6 @@ shape = SubResource("SegmentShape2D_xtrh0")
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("SegmentShape2D_bwyro")
 
-
 [node name="jobDesc" type="VBoxContainer" parent="."]
 offset_left = 122.0
 offset_top = 110.0
@@ -322,13 +317,12 @@ text = "0"
 label_settings = SubResource("LabelSettings_a4ttg")
 
 [node name="controls" type="TextureRect" parent="."]
-offset_left = 37.0
-offset_top = 42.0
-offset_right = 1334.0
-offset_bottom = 628.0
+offset_left = 1445.0
+offset_top = 177.0
+offset_right = 2742.0
+offset_bottom = 763.0
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("14_cwbxr")
-
 
 [connection signal="leaveNPC" from="." to="NPCPath/NPCPathFollow" method="_on_node_2d_leave_npc"]
 [connection signal="leaveNPC" from="." to="NPCPath/NPCPathFollow/npc" method="_on_node_2d_leave_npc"]
