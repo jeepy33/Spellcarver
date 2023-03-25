@@ -1,9 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgkjgbojycssd"]
+
+[gd_scene load_steps=15 format=3 uid="uid://biyby6ka3xvfm"]
+
 
 [ext_resource type="Script" path="res://src/scripts/menu.gd" id="1_5qt7d"]
+[ext_resource type="Texture2D" uid="uid://5u243wuqx70g" path="res://assets/UI/wood.jpg" id="2_mnf5k"]
 [ext_resource type="Texture2D" uid="uid://c5b7snqpx5x57" path="res://assets/UI/start_button_up.png" id="2_xphot"]
 [ext_resource type="Texture2D" uid="uid://dvdsal4gcjfua" path="res://assets/UI/start_button_down.png" id="3_0j45y"]
+[ext_resource type="Texture2D" uid="uid://4yv227hge07u" path="res://assets/UI/fabric.jpg" id="3_76uaa"]
+[ext_resource type="Texture2D" uid="uid://gvs5bohphjbu" path="res://assets/sprites/shopkeeper_talksprite.png" id="3_ckks8"]
 [ext_resource type="Texture2D" uid="uid://ci3gke3g8g4de" path="res://assets/UI/start_button_hover.png" id="4_cp2cd"]
+[ext_resource type="Texture2D" uid="uid://k5in8xo2w8v" path="res://assets/UI/Spellcarver_logo.png" id="4_gl54c"]
 [ext_resource type="Texture2D" uid="uid://cv2x4hakef10u" path="res://assets/UI/options_button_up.png" id="5_6g5d3"]
 [ext_resource type="Texture2D" uid="uid://cpjlkxs6x6uis" path="res://assets/UI/options_button_down.png" id="6_sdcyc"]
 [ext_resource type="Texture2D" uid="uid://c5ehiee3xpl75" path="res://assets/UI/options_button_hover.png" id="7_sumnc"]
@@ -20,12 +26,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5qt7d")
 
+[node name="bgd" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -91.0
+offset_top = -140.0
+offset_right = 1979.0
+offset_bottom = 1205.0
+texture = ExtResource("2_mnf5k")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 5.0
+offset_right = 2847.0
+offset_bottom = 1064.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gl54c")
+
+[node name="player_sprite" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 242.0
+offset_right = 3055.0
+offset_bottom = 3242.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ckks8")
+
+[node name="Fabric" type="Sprite2D" parent="."]
+position = Vector2(2794, 553)
+texture = ExtResource("3_76uaa")
+
+[node name="Fabric2" type="Sprite2D" parent="."]
+position = Vector2(-853, 585)
+texture = ExtResource("3_76uaa")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 590.0
-offset_right = 470.0
-offset_bottom = 961.0
+offset_left = 938.0
+offset_top = 796.0
+offset_right = 1255.0
+offset_bottom = 1167.0
+scale = Vector2(0.6, 0.6)
 alignment = 1
 
 [node name="startButton" type="TextureButton" parent="VBoxContainer"]
