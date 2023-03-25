@@ -4,6 +4,7 @@ var curJob = 0
 
 # set in talkscene, NPCPathFollow, used in npc
 var acceptedJob = false
+
 var tome_pages = 4
 
 var master_quadrant = 0
@@ -47,6 +48,8 @@ var tome_contents = [full,fire,low_potency,water]
 var taskDone = false
 
 var usePrevSprite = false
+
+var curRune = "Fire"
 
 
 # Called when the node enters the scene tree for the first time.

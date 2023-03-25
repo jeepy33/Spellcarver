@@ -19,3 +19,5 @@ func _on_dialog_confirmed():
 		Global.curJob += 1
 		Global.usePrevSprite = true
 	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
+
+

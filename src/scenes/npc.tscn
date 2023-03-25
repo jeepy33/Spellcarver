@@ -34,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_8afsw")
+"texture": ExtResource("5_5eutk")
 }],
 "loop": true,
 "name": &"down_2",
@@ -42,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_5eutk")
+"texture": ExtResource("4_8afsw")
 }],
 "loop": true,
 "name": &"down_3",
@@ -66,7 +66,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_10pd8")
+"texture": ExtResource("7_1jr3u")
 }],
 "loop": true,
 "name": &"up_2",
@@ -74,7 +74,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_1jr3u")
+"texture": ExtResource("6_10pd8")
 }],
 "loop": true,
 "name": &"up_3",
@@ -98,7 +98,7 @@ shape = SubResource("RectangleShape2D_3n5b1")
 position = Vector2(0, -40)
 scale = Vector2(0.35, 0.35)
 sprite_frames = SubResource("SpriteFrames_5nh5m")
-animation = &"down_1"
+animation = &"down_2"
 
 [node name="highlight" type="Sprite2D" parent="CollisionShape2D"]
 position = Vector2(6.66666, -82.5803)
