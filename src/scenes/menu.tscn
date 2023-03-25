@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgkjgbojycssd"]
+[gd_scene load_steps=2 format=3 uid="uid://biyby6ka3xvfm"]
 
 [ext_resource type="Script" path="res://src/scripts/menu.gd" id="1_5qt7d"]
 
@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_5qt7d")
 
 [node name="startButton" type="Button" parent="."]
+layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Start Game"

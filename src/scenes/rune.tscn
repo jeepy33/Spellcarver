@@ -1,0 +1,628 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmn7vicc57ix0"]
+
+[ext_resource type="Script" path="res://src/scripts/rune.gd" id="1_0thqm"]
+[ext_resource type="Texture2D" uid="uid://cuiv4dais068k" path="res://assets/Rune-Guide.png" id="2_4m6vv"]
+
+[node name="rune" type="Node"]
+script = ExtResource("1_0thqm")
+
+[node name="rune_guide" type="Sprite2D" parent="."]
+position = Vector2(526, 297)
+texture = ExtResource("2_4m6vv")
+
+[node name="quadrant_zero" type="Node" parent="rune_guide"]
+
+[node name="0" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 280.0
+offset_top = 165.0
+offset_right = 324.0
+offset_bottom = 189.0
+size_flags_horizontal = 0
+
+[node name="1" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 411.0
+offset_top = 51.0
+offset_right = 455.0
+offset_bottom = 75.0
+
+[node name="2" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 351.0
+offset_top = 131.0
+offset_right = 395.0
+offset_bottom = 155.0
+
+[node name="3" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 322.0
+offset_top = 214.0
+offset_right = 366.0
+offset_bottom = 238.0
+
+[node name="4" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 443.0
+offset_top = 95.0
+offset_right = 487.0
+offset_bottom = 119.0
+
+[node name="5" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 505.0
+offset_top = 89.0
+offset_right = 549.0
+offset_bottom = 113.0
+
+[node name="6" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 362.0
+offset_top = 232.0
+offset_right = 406.0
+offset_bottom = 256.0
+
+[node name="7" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 387.0
+offset_top = 169.0
+offset_right = 431.0
+offset_bottom = 193.0
+
+[node name="8" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 457.0
+offset_top = 143.0
+offset_right = 501.0
+offset_bottom = 167.0
+
+[node name="9" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 502.0
+offset_top = 158.0
+offset_right = 546.0
+offset_bottom = 182.0
+
+[node name="10" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 398.0
+offset_top = 247.0
+offset_right = 442.0
+offset_bottom = 271.0
+
+[node name="11" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 422.0
+offset_top = 204.0
+offset_right = 466.0
+offset_bottom = 228.0
+
+[node name="12" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 461.0
+offset_top = 181.0
+offset_right = 505.0
+offset_bottom = 205.0
+
+[node name="13" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 503.0
+offset_top = 191.0
+offset_right = 547.0
+offset_bottom = 215.0
+
+[node name="14" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 425.0
+offset_top = 256.0
+offset_right = 469.0
+offset_bottom = 280.0
+
+[node name="15" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 453.0
+offset_top = 234.0
+offset_right = 497.0
+offset_bottom = 258.0
+
+[node name="16" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 471.0
+offset_top = 209.0
+offset_right = 515.0
+offset_bottom = 233.0
+
+[node name="17" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 448.0
+offset_top = 260.0
+offset_right = 492.0
+offset_bottom = 284.0
+
+[node name="18" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 479.0
+offset_top = 259.0
+offset_right = 523.0
+offset_bottom = 283.0
+
+[node name="19" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 483.0
+offset_top = 226.0
+offset_right = 527.0
+offset_bottom = 250.0
+
+[node name="20" type="CheckButton" parent="rune_guide/quadrant_zero"]
+offset_left = 505.0
+offset_top = 243.0
+offset_right = 549.0
+offset_bottom = 267.0
+
+[node name="quadrant_one" type="Node" parent="rune_guide"]
+
+[node name="0" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 608.0
+offset_top = 56.0
+offset_right = 652.0
+offset_bottom = 80.0
+size_flags_horizontal = 0
+
+[node name="1" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 728.0
+offset_top = 166.0
+offset_right = 772.0
+offset_bottom = 190.0
+
+[node name="2" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 659.0
+offset_top = 131.0
+offset_right = 703.0
+offset_bottom = 155.0
+
+[node name="3" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 566.0
+offset_top = 93.0
+offset_right = 610.0
+offset_bottom = 117.0
+
+[node name="4" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 702.0
+offset_top = 230.0
+offset_right = 746.0
+offset_bottom = 254.0
+
+[node name="5" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 695.0
+offset_top = 284.0
+offset_right = 739.0
+offset_bottom = 308.0
+
+[node name="6" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 559.0
+offset_top = 147.0
+offset_right = 603.0
+offset_bottom = 171.0
+
+[node name="7" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 621.0
+offset_top = 170.0
+offset_right = 665.0
+offset_bottom = 194.0
+
+[node name="8" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 644.0
+offset_top = 233.0
+offset_right = 688.0
+offset_bottom = 257.0
+
+[node name="9" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 636.0
+offset_top = 284.0
+offset_right = 680.0
+offset_bottom = 308.0
+
+[node name="10" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 551.0
+offset_top = 179.0
+offset_right = 595.0
+offset_bottom = 203.0
+
+[node name="11" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 583.0
+offset_top = 205.0
+offset_right = 627.0
+offset_bottom = 229.0
+
+[node name="12" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 612.0
+offset_top = 240.0
+offset_right = 656.0
+offset_bottom = 264.0
+
+[node name="13" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 599.0
+offset_top = 284.0
+offset_right = 643.0
+offset_bottom = 308.0
+
+[node name="14" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 537.0
+offset_top = 209.0
+offset_right = 581.0
+offset_bottom = 233.0
+
+[node name="15" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 556.0
+offset_top = 233.0
+offset_right = 600.0
+offset_bottom = 257.0
+
+[node name="16" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 578.0
+offset_top = 249.0
+offset_right = 622.0
+offset_bottom = 273.0
+
+[node name="17" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 526.0
+offset_top = 225.0
+offset_right = 570.0
+offset_bottom = 249.0
+
+[node name="18" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 528.0
+offset_top = 258.0
+offset_right = 572.0
+offset_bottom = 282.0
+
+[node name="19" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 561.0
+offset_top = 261.0
+offset_right = 605.0
+offset_bottom = 285.0
+
+[node name="20" type="CheckButton" parent="rune_guide/quadrant_one"]
+offset_left = 545.0
+offset_top = 285.0
+offset_right = 589.0
+offset_bottom = 309.0
+
+[node name="quadrant_two" type="Node" parent="rune_guide"]
+
+[node name="0" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 738.0
+offset_top = 386.0
+offset_right = 782.0
+offset_bottom = 410.0
+size_flags_horizontal = 0
+
+[node name="1" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 607.0
+offset_top = 518.0
+offset_right = 651.0
+offset_bottom = 542.0
+
+[node name="2" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 658.0
+offset_top = 440.0
+offset_right = 702.0
+offset_bottom = 464.0
+
+[node name="3" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 698.0
+offset_top = 344.0
+offset_right = 742.0
+offset_bottom = 368.0
+
+[node name="4" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 570.0
+offset_top = 468.0
+offset_right = 614.0
+offset_bottom = 492.0
+
+[node name="5" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 504.0
+offset_top = 479.0
+offset_right = 548.0
+offset_bottom = 503.0
+
+[node name="6" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 646.0
+offset_top = 327.0
+offset_right = 690.0
+offset_bottom = 351.0
+
+[node name="7" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 620.0
+offset_top = 402.0
+offset_right = 664.0
+offset_bottom = 426.0
+
+[node name="8" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 546.0
+offset_top = 427.0
+offset_right = 590.0
+offset_bottom = 451.0
+
+[node name="9" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 503.0
+offset_top = 418.0
+offset_right = 547.0
+offset_bottom = 442.0
+
+[node name="10" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 612.0
+offset_top = 327.0
+offset_right = 656.0
+offset_bottom = 351.0
+
+[node name="11" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 582.0
+offset_top = 362.0
+offset_right = 626.0
+offset_bottom = 386.0
+
+[node name="12" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 547.0
+offset_top = 390.0
+offset_right = 591.0
+offset_bottom = 414.0
+
+[node name="13" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 503.0
+offset_top = 379.0
+offset_right = 547.0
+offset_bottom = 403.0
+
+[node name="14" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 583.0
+offset_top = 313.0
+offset_right = 627.0
+offset_bottom = 337.0
+
+[node name="15" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 554.0
+offset_top = 335.0
+offset_right = 598.0
+offset_bottom = 359.0
+
+[node name="16" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 538.0
+offset_top = 362.0
+offset_right = 582.0
+offset_bottom = 386.0
+
+[node name="17" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 563.0
+offset_top = 305.0
+offset_right = 607.0
+offset_bottom = 329.0
+
+[node name="18" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 528.0
+offset_top = 309.0
+offset_right = 572.0
+offset_bottom = 333.0
+
+[node name="19" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 527.0
+offset_top = 341.0
+offset_right = 571.0
+offset_bottom = 365.0
+
+[node name="20" type="CheckButton" parent="rune_guide/quadrant_two"]
+offset_left = 503.0
+offset_top = 327.0
+offset_right = 547.0
+offset_bottom = 351.0
+
+[node name="quadrant_three" type="Node" parent="rune_guide"]
+
+[node name="0" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 393.0
+offset_top = 509.0
+offset_right = 437.0
+offset_bottom = 533.0
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 275.0
+offset_top = 394.0
+offset_right = 319.0
+offset_bottom = 418.0
+
+[node name="2" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 347.0
+offset_top = 438.0
+offset_right = 391.0
+offset_bottom = 462.0
+
+[node name="3" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 432.0
+offset_top = 463.0
+offset_right = 476.0
+offset_bottom = 487.0
+
+[node name="4" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 318.0
+offset_top = 349.0
+offset_right = 362.0
+offset_bottom = 373.0
+
+[node name="5" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 318.0
+offset_top = 285.0
+offset_right = 362.0
+offset_bottom = 309.0
+
+[node name="6" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 448.0
+offset_top = 425.0
+offset_right = 492.0
+offset_bottom = 449.0
+
+[node name="7" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 388.0
+offset_top = 401.0
+offset_right = 432.0
+offset_bottom = 425.0
+
+[node name="8" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 360.0
+offset_top = 330.0
+offset_right = 404.0
+offset_bottom = 354.0
+
+[node name="9" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 378.0
+offset_top = 286.0
+offset_right = 422.0
+offset_bottom = 310.0
+
+[node name="10" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 455.0
+offset_top = 392.0
+offset_right = 499.0
+offset_bottom = 416.0
+
+[node name="11" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 428.0
+offset_top = 360.0
+offset_right = 472.0
+offset_bottom = 384.0
+
+[node name="12" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 398.0
+offset_top = 325.0
+offset_right = 442.0
+offset_bottom = 349.0
+
+[node name="13" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 410.0
+offset_top = 285.0
+offset_right = 454.0
+offset_bottom = 309.0
+
+[node name="14" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 467.0
+offset_top = 361.0
+offset_right = 511.0
+offset_bottom = 385.0
+
+[node name="15" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 452.0
+offset_top = 335.0
+offset_right = 496.0
+offset_bottom = 359.0
+
+[node name="16" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 429.0
+offset_top = 318.0
+offset_right = 473.0
+offset_bottom = 342.0
+
+[node name="17" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 482.0
+offset_top = 343.0
+offset_right = 526.0
+offset_bottom = 367.0
+
+[node name="18" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 476.0
+offset_top = 310.0
+offset_right = 520.0
+offset_bottom = 334.0
+
+[node name="19" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 443.0
+offset_top = 306.0
+offset_right = 487.0
+offset_bottom = 330.0
+
+[node name="20" type="CheckButton" parent="rune_guide/quadrant_three"]
+offset_left = 466.0
+offset_top = 284.0
+offset_right = 510.0
+offset_bottom = 308.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 862.0
+offset_top = 500.0
+offset_right = 1106.0
+offset_bottom = 627.0
+text = "label"
+
+[node name="carve_rune" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 579.0
+offset_right = 573.0
+offset_bottom = 623.0
+text = "CARVE"
+
+[connection signal="toggled" from="rune_guide/quadrant_zero/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_zero/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_one/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_two/20" to="." method="_on_20_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/0" to="." method="_on_0_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/1" to="." method="_on_1_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/2" to="." method="_on_2_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/3" to="." method="_on_3_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/4" to="." method="_on_4_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/5" to="." method="_on_5_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/6" to="." method="_on_6_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/7" to="." method="_on_7_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/8" to="." method="_on_8_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/9" to="." method="_on_9_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/10" to="." method="_on_10_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/11" to="." method="_on_11_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/12" to="." method="_on_12_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/13" to="." method="_on_13_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/14" to="." method="_on_14_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/15" to="." method="_on_15_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/16" to="." method="_on_16_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/17" to="." method="_on_17_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/18" to="." method="_on_18_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/19" to="." method="_on_19_toggled"]
+[connection signal="toggled" from="rune_guide/quadrant_three/20" to="." method="_on_20_toggled"]
+[connection signal="pressed" from="carve_rune" to="." method="_on_carve_rune_pressed"]
