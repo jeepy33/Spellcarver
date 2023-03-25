@@ -18,6 +18,7 @@ func _ready():
 	
 	$NPCPath.hide()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = true
+	$NPCPath/NPCPathFollow/npc/Area2D/CollisionShape2D.disabled = true
 	
 	$player.start($player_start.position)
 	
@@ -46,6 +47,7 @@ func _process(delta):
 			shopOpen = not shopOpen
 		if taskAvailable:
 			print(str("player selected task"))
+			get_tree().change_scene_to_file("res://src/scenes/talkscene.tscn")
 	
 	if shopOpen:
 		print(str("start timer"))
@@ -94,6 +96,7 @@ func _on_door_body_exited(body):
 func _on_npc_timer_timeout():
 	$NPCPath.show()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = false
+	$NPCPath/NPCPathFollow/npc/Area2D/CollisionShape2D.disabled = false
 	$NPCTimer.paused = true # maybe race condition (probably not?)
 
 func _on_npc_player_enter():

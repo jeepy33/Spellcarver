@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://grshk2c1gqjq"]
+
+[ext_resource type="Texture2D" uid="uid://cenv6iff5yqsr" path="res://assets/store/counter.png" id="1_4dhfx"]
+[ext_resource type="Script" path="res://src/scripts/talkscene.gd" id="1_5j3xe"]
+[ext_resource type="Texture2D" uid="uid://bxm8v8ewsu0u3" path="res://assets/store/counter_background.png" id="2_7mq1s"]
+[ext_resource type="Texture2D" uid="uid://b4qcf3v8vbanq" path="res://assets/shopkeeper_talksprite.png" id="3_7y0ti"]
+[ext_resource type="Script" path="res://src/scripts/npc_talkscene.gd" id="4_4pvd0"]
+[ext_resource type="Texture2D" uid="uid://m1iqxi63gqb7" path="res://assets/dog_talksprite.png" id="4_qaiu7"]
+[ext_resource type="Script" path="res://src/scripts/dialog.gd" id="6_hiqxd"]
+
+[node name="talkscene" type="Node2D"]
+script = ExtResource("1_5j3xe")
+
+[node name="counter" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1417, 859)
+scale = Vector2(1.19588, 1.17473)
+texture = ExtResource("1_4dhfx")
+
+[node name="shelf" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1234, 213)
+texture = ExtResource("2_7mq1s")
+
+[node name="player" type="Sprite2D" parent="."]
+position = Vector2(1445, 416)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_7y0ti")
+
+[node name="npc_talkscene" type="Sprite2D" parent="."]
+position = Vector2(385, 688)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_qaiu7")
+script = ExtResource("4_4pvd0")
+
+[node name="dialog" type="AcceptDialog" parent="."]
+title = "Character Name"
+position = Vector2i(100, 300)
+size = Vector2i(700, 250)
+visible = true
+unresizable = true
+ok_button_text = "Accept Job"
+dialog_text = "Text here"
+dialog_close_on_escape = false
+dialog_autowrap = true
+script = ExtResource("6_hiqxd")
+
+[connection signal="confirmed" from="dialog" to="." method="_on_dialog_confirmed"]
