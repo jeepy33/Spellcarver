@@ -541,6 +541,14 @@ offset_right = 573.0
 offset_bottom = 623.0
 text = "CARVE"
 
+[node name="Runes" type="Label" parent="."]
+offset_left = 276.0
+offset_top = 646.0
+offset_right = 768.0
+offset_bottom = 773.0
+text = "label"
+horizontal_alignment = 1
+
 [connection signal="toggled" from="rune_guide/quadrant_zero/0" to="." method="_on_0_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_zero/1" to="." method="_on_1_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_zero/2" to="." method="_on_2_toggled"]
