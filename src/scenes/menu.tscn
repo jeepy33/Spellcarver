@@ -1,6 +1,4 @@
-
 [gd_scene load_steps=15 format=3 uid="uid://biyby6ka3xvfm"]
-
 
 [ext_resource type="Script" path="res://src/scripts/menu.gd" id="1_5qt7d"]
 [ext_resource type="Texture2D" uid="uid://5u243wuqx70g" path="res://assets/UI/wood.jpg" id="2_mnf5k"]
