@@ -1,18 +1,20 @@
-[gd_scene load_steps=36 format=3 uid="uid://dlrmoyjnyoklc"]
-
+[gd_scene load_steps=38 format=3 uid="uid://d328gsf3iugak"]
 
 [ext_resource type="Script" path="res://src/scripts/shop.gd" id="1_hwtng"]
 [ext_resource type="PackedScene" uid="uid://cj1x2tjlhwp4x" path="res://src/scenes/player.tscn" id="1_lu3kv"]
 [ext_resource type="Script" path="res://src/scripts/rune_table.gd" id="2_g1li3"]
-[ext_resource type="Texture2D" uid="uid://lrwjbwnjyfxe" path="res://assets/store/rune_station.png" id="4_xtayq"]
+[ext_resource type="Texture2D" uid="uid://dpmvs2ebsp68" path="res://assets/store/runetable.png" id="4_b5y1d"]
 [ext_resource type="Texture2D" uid="uid://c5afnqufanpfl" path="res://assets/placeholders/rune_table_hightlight.png" id="5_gmpsj"]
-[ext_resource type="Texture2D" uid="uid://cmqmvd57pcjou" path="res://assets/placeholders/register.png" id="6_m2y38"]
+[ext_resource type="Texture2D" uid="uid://dslsj43hkhuc7" path="res://assets/store/runetable_highlight.png" id="5_jc2jg"]
 [ext_resource type="Texture2D" uid="uid://23ppcwykbtv" path="res://assets/store/save_portal.png" id="7_wk25x"]
-[ext_resource type="Texture2D" uid="uid://c8mk18cxx5xi2" path="res://assets/placeholders/door.png" id="8_8g8vq"]
+[ext_resource type="Texture2D" uid="uid://cdud7ny6wm8dl" path="res://assets/store/storefront_closed.png" id="8_tt2xv"]
+[ext_resource type="Texture2D" uid="uid://6o5ms26mc2af" path="res://assets/store/storefront_open.png" id="9_6xwpi"]
 [ext_resource type="Script" path="res://src/scripts/NPCPathFollow.gd" id="9_fptua"]
 [ext_resource type="PackedScene" uid="uid://c5iusm86jg3xn" path="res://src/scenes/npc.tscn" id="9_vfvce"]
 [ext_resource type="Texture2D" uid="uid://d3iq8o5ngwbq7" path="res://assets/store/floor.png" id="11_3ey0b"]
 [ext_resource type="Texture2D" uid="uid://cenv6iff5yqsr" path="res://assets/store/counter.png" id="12_e6nj4"]
+[ext_resource type="Texture2D" uid="uid://cwwlhg54fl5sk" path="res://assets/UI/gold_coin.png" id="13_0j4cc"]
+[ext_resource type="Texture2D" uid="uid://bdmvnnksgd1rd" path="res://assets/UI/controls.png" id="14_cwbxr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eeak"]
 radius = 81.5
@@ -20,12 +22,6 @@ height = 214.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpq5x"]
 size = Vector2(305, 226)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c13xr"]
-size = Vector2(114, 94)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xefip"]
-size = Vector2(211, 162.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6rgg"]
 size = Vector2(268, 221.333)
@@ -37,7 +33,7 @@ size = Vector2(372, 337.333)
 size = Vector2(95, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2y5qp"]
-size = Vector2(262, 87)
+size = Vector2(401, 157)
 
 [sub_resource type="Curve2D" id="Curve2D_kumup"]
 _data = {
@@ -101,6 +97,9 @@ b = Vector2(1092, 710)
 a = Vector2(1117, 273)
 b = Vector2(1040, 272)
 
+[sub_resource type="LabelSettings" id="LabelSettings_a4ttg"]
+font_size = 72
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hwtng")
 
@@ -115,8 +114,8 @@ metadata/_edit_group_ = true
 
 [node name="table" type="Sprite2D" parent="rune_table"]
 z_index = -1
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_xtayq")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_b5y1d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rune_table"]
 position = Vector2(0, 0.5)
@@ -124,9 +123,8 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_0eeak")
 
 [node name="highlight" type="Sprite2D" parent="rune_table"]
-position = Vector2(0, -75)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_gmpsj")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_jc2jg")
 
 [node name="Area2D" type="Area2D" parent="rune_table"]
 
@@ -137,29 +135,6 @@ debug_color = Color(0.647059, 0.454902, 0.67451, 0.419608)
 
 [node name="player_start" type="Marker2D" parent="."]
 position = Vector2(743, 448)
-
-[node name="cash_register" type="StaticBody2D" parent="."]
-position = Vector2(1266, 129)
-metadata/_edit_group_ = true
-
-[node name="register" type="Sprite2D" parent="cash_register"]
-texture = ExtResource("6_m2y38")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cash_register"]
-position = Vector2(-1, 1)
-shape = SubResource("RectangleShape2D_c13xr")
-
-[node name="highlight" type="Sprite2D" parent="cash_register"]
-position = Vector2(0, -47.9)
-scale = Vector2(0.465574, 0.567382)
-texture = ExtResource("5_gmpsj")
-
-[node name="Area2D" type="Area2D" parent="cash_register"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cash_register/Area2D"]
-position = Vector2(0, 5.125)
-shape = SubResource("RectangleShape2D_xefip")
-debug_color = Color(0.592157, 0.443137, 0.827451, 0.419608)
 
 [node name="save_station" type="StaticBody2D" parent="."]
 position = Vector2(572, 762)
@@ -197,24 +172,25 @@ dialog_text = "Would you like to save your game?"
 
 [node name="shop_door" type="StaticBody2D" parent="."]
 position = Vector2(1146, 1023)
-metadata/_edit_group_ = true
 
 [node name="door" type="Sprite2D" parent="shop_door"]
-texture = ExtResource("8_8g8vq")
+position = Vector2(0, -75)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_tt2xv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shop_door"]
 position = Vector2(-1.5, -2)
 shape = SubResource("RectangleShape2D_1u5xs")
 
 [node name="highlight" type="Sprite2D" parent="shop_door"]
-position = Vector2(0.499988, -28.4)
-scale = Vector2(0.516393, 0.4)
-texture = ExtResource("5_gmpsj")
+position = Vector2(0.5, -75)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_6xwpi")
 
 [node name="Area2D" type="Area2D" parent="shop_door"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shop_door/Area2D"]
-position = Vector2(6, -28.5)
+position = Vector2(9.5, -63.5)
 shape = SubResource("RectangleShape2D_2y5qp")
 debug_color = Color(0.592157, 0.454902, 0.792157, 0.419608)
 
@@ -300,13 +276,34 @@ shape = SubResource("SegmentShape2D_xtrh0")
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("SegmentShape2D_bwyro")
 
+[node name="gold" type="TextureRect" parent="."]
+offset_left = 1721.0
+offset_top = 20.0
+offset_right = 1809.0
+offset_bottom = 113.0
+texture = ExtResource("13_0j4cc")
+
+[node name="money" type="Label" parent="."]
+offset_left = 1819.0
+offset_top = 18.0
+offset_right = 1899.0
+offset_bottom = 120.0
+text = "0"
+label_settings = SubResource("LabelSettings_a4ttg")
+
+[node name="controls" type="TextureRect" parent="."]
+offset_left = 37.0
+offset_top = 42.0
+offset_right = 1334.0
+offset_bottom = 628.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("14_cwbxr")
+
 [connection signal="leaveNPC" from="." to="NPCPath/NPCPathFollow" method="_on_node_2d_leave_npc"]
 [connection signal="leaveNPC" from="." to="NPCPath/NPCPathFollow/npc" method="_on_node_2d_leave_npc"]
 [connection signal="touching" from="player" to="." method="_on_player_touching"]
 [connection signal="body_entered" from="rune_table/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="rune_table/Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="cash_register/Area2D" to="." method="_on_register_body_entered"]
-[connection signal="body_exited" from="cash_register/Area2D" to="." method="_on_register_body_exited"]
 [connection signal="body_entered" from="save_station/Area2D" to="." method="_on_save_body_entered"]
 [connection signal="body_exited" from="save_station/Area2D" to="." method="_on_save_body_exited"]
 [connection signal="body_entered" from="shop_door/Area2D" to="." method="_on_door_body_entered"]

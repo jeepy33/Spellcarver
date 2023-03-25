@@ -25,6 +25,8 @@ func _ready():
 	
 	$player.start($player_start.position)
 	
+	$money.text = str(Global.player_funds)
+	
 	playerInRuneTable = false
 	playerInCashRegister = false
 	playerInSaveStation = false
@@ -41,6 +43,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("select_object"):
 		if playerInRuneTable:
 			print(str("player selected rune"))
+			get_tree().change_scene_to_file("res://src/scenes/rune.tscn")
 		if playerInCashRegister:
 			print(str("player selected cash register"))
 		if playerInSaveStation:
@@ -85,6 +88,7 @@ func _on_area_2d_body_entered(body):
 	if body.get_name() == "player":
 		$rune_table/highlight.show()
 		playerInRuneTable = true
+		
 
 func _on_area_2d_body_exited(body):
 	$rune_table/highlight.hide()

@@ -2409,13 +2409,13 @@ offset_right = 1731.0
 offset_bottom = 879.0
 text = "label"
 
-[node name="Runes" type="Label" parent="."]
-offset_left = 1408.0
-offset_top = 668.0
-offset_right = 1900.0
-offset_bottom = 795.0
-text = "label"
-horizontal_alignment = 1
+[node name="Runes" type="ConfirmationDialog" parent="."]
+title = "Carving Result..."
+position = Vector2i(1525, 700)
+size = Vector2i(250, 125)
+ok_button_text = "Use Rune"
+dialog_autowrap = true
+cancel_button_text = "Discard Rune"
 
 [node name="carve_rune" type="TextureButton" parent="."]
 offset_left = 839.0
@@ -4826,6 +4826,15 @@ texture_normal = ExtResource("44_c73jl")
 texture_pressed = ExtResource("43_6khby")
 texture_click_mask = ExtResource("34_buxif")
 
+[node name="exit" type="TextureButton" parent="."]
+offset_left = 1777.0
+offset_top = 24.0
+offset_right = 1893.0
+offset_bottom = 160.0
+texture_normal = ExtResource("73_8ixic")
+texture_pressed = ExtResource("74_utn4w")
+texture_hover = ExtResource("75_jgo8u")
+
 [connection signal="toggled" from="rune_result/quadrant_one/0" to="." method="_on_0_toggled"]
 [connection signal="toggled" from="rune_result/quadrant_one/1" to="." method="_on_1_toggled"]
 [connection signal="toggled" from="rune_result/quadrant_one/2" to="." method="_on_2_toggled"]
@@ -4952,6 +4961,7 @@ texture_click_mask = ExtResource("34_buxif")
 [connection signal="toggled" from="rune_guide/quadrant_three/18" to="." method="_on_18_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_three/19" to="." method="_on_19_toggled"]
 [connection signal="toggled" from="rune_guide/quadrant_three/20" to="." method="_on_20_toggled"]
+[connection signal="confirmed" from="Runes" to="." method="_on_runes_confirmed"]
 [connection signal="pressed" from="carve_rune" to="." method="_on_carve_rune_pressed"]
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="journal" to="." method="_on_journal_pressed"]
@@ -5084,3 +5094,4 @@ texture_click_mask = ExtResource("34_buxif")
 [connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/18" to="." method="_on_18_toggled"]
 [connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/19" to="." method="_on_19_toggled"]
 [connection signal="toggled" from="TomeOpen/right_rune/quadrant_three/20" to="." method="_on_20_toggled"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

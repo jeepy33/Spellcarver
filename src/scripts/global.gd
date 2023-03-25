@@ -8,6 +8,8 @@ var tome_pages = 4
 
 var master_quadrant = 0
 
+var player_funds = 0
+
 var blank = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var full = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 # primordial runes
