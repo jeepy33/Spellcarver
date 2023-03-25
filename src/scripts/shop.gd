@@ -14,7 +14,6 @@ signal leaveNPC
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$rune_table/highlight.hide()
-	$cash_register/highlight.hide()
 	$save_station/highlight.hide()
 	$shop_door/highlight.hide()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D/highlight.hide()
