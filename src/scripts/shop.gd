@@ -4,6 +4,7 @@ var playerInRuneTable
 var playerInCashRegister
 var playerInSaveStation
 var playerInShopDoor
+var taskAvailable
 
 var shopOpen
 
@@ -13,6 +14,7 @@ func _ready():
 	$cash_register/highlight.hide()
 	$save_station/highlight.hide()
 	$shop_door/highlight.hide()
+	$NPCPath/NPCPathFollow/npc/CollisionShape2D/highlight.hide()
 	
 	$NPCPath.hide()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = true
@@ -25,6 +27,8 @@ func _ready():
 	playerInShopDoor = false
 	
 	shopOpen = false
+	
+	taskAvailable = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,6 +44,8 @@ func _process(delta):
 		if playerInShopDoor:
 			print(str("player selected shop door"))
 			shopOpen = not shopOpen
+		if taskAvailable:
+			print(str("player selected task"))
 	
 	if shopOpen:
 		print(str("start timer"))
@@ -88,3 +94,11 @@ func _on_door_body_exited(body):
 func _on_npc_timer_timeout():
 	$NPCPath.show()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = false
+
+func _on_npc_player_enter():
+	$NPCPath/NPCPathFollow/npc/CollisionShape2D/highlight.show()
+	taskAvailable = true
+
+func _on_npc_player_leave():
+	$NPCPath/NPCPathFollow/npc/CollisionShape2D/highlight.hide()
+	taskAvailable = false

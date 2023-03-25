@@ -184,3 +184,5 @@ runSpeed = 75
 [connection signal="timeout" from="NPCTimer" to="." method="_on_npc_timer_timeout"]
 [connection signal="timeout" from="NPCTimer" to="NPCPath/NPCPathFollow" method="_on_npc_timer_timeout"]
 [connection signal="pathComplete" from="NPCPath/NPCPathFollow" to="NPCPath/NPCPathFollow/npc" method="_on_npc_path_follow_path_complete"]
+[connection signal="playerEnter" from="NPCPath/NPCPathFollow/npc" to="." method="_on_npc_player_enter"]
+[connection signal="playerLeave" from="NPCPath/NPCPathFollow/npc" to="." method="_on_npc_player_leave"]
