@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjibj"]
-size = Vector2(92, 165)
+size = Vector2(175, 233)
 
 [node name="npc" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -50,7 +50,6 @@ shape = SubResource("RectangleShape2D_3n5b1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 position = Vector2(0, 6.66667)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_5nh5m")
 animation = &"down"
 frame_progress = 0.824024
@@ -66,7 +65,7 @@ offset = Vector2(0, -275)
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, -3.5)
+position = Vector2(3.5, -37.5)
 shape = SubResource("RectangleShape2D_sjibj")
 debug_color = Color(0.67451, 0.407843, 0.776471, 0.419608)
 

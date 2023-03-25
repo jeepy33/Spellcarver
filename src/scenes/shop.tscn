@@ -1,19 +1,25 @@
-[gd_scene load_steps=20 format=3 uid="uid://d328gsf3iugak"]
+
+[gd_scene load_steps=23 format=3 uid="uid://dlrmoyjnyoklc"]
+
 
 [ext_resource type="Script" path="res://src/scripts/shop.gd" id="1_hwtng"]
-[ext_resource type="PackedScene" path="res://src/scenes/player.tscn" id="1_lu3kv"]
+[ext_resource type="PackedScene" uid="uid://cj1x2tjlhwp4x" path="res://src/scenes/player.tscn" id="1_lu3kv"]
 [ext_resource type="Script" path="res://src/scripts/rune_table.gd" id="2_g1li3"]
-[ext_resource type="Texture2D" uid="uid://di1env1xef8hl" path="res://assets/placeholders/rune_table.png" id="2_l0513"]
+[ext_resource type="Texture2D" uid="uid://lrwjbwnjyfxe" path="res://assets/store/rune_station.png" id="4_xtayq"]
 [ext_resource type="Texture2D" uid="uid://c5afnqufanpfl" path="res://assets/placeholders/rune_table_hightlight.png" id="5_gmpsj"]
 [ext_resource type="Texture2D" uid="uid://cmqmvd57pcjou" path="res://assets/placeholders/register.png" id="6_m2y38"]
-[ext_resource type="Texture2D" uid="uid://83na5ja4i83r" path="res://assets/placeholders/save_station.png" id="7_2tngb"]
+[ext_resource type="Texture2D" uid="uid://23ppcwykbtv" path="res://assets/store/save_portal.png" id="7_wk25x"]
 [ext_resource type="Texture2D" uid="uid://c8mk18cxx5xi2" path="res://assets/placeholders/door.png" id="8_8g8vq"]
 [ext_resource type="Script" path="res://src/scripts/NPCPathFollow.gd" id="9_fptua"]
-[ext_resource type="PackedScene" path="res://src/scenes/npc.tscn" id="9_vfvce"]
+
+[ext_resource type="PackedScene" uid="uid://c5iusm86jg3xn" path="res://src/scenes/npc.tscn" id="9_vfvce"]
+[ext_resource type="Texture2D" uid="uid://d3iq8o5ngwbq7" path="res://assets/store/floor.png" id="11_3ey0b"]
+[ext_resource type="Texture2D" uid="uid://cenv6iff5yqsr" path="res://assets/store/counter.png" id="12_e6nj4"]
+
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eeak"]
-radius = 73.5
-height = 216.0
+radius = 81.5
+height = 214.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpq5x"]
 size = Vector2(305, 226)
@@ -25,10 +31,10 @@ size = Vector2(114, 94)
 size = Vector2(211, 162.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6rgg"]
-size = Vector2(185.333, 182.667)
+size = Vector2(268, 221.333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0jdf"]
-size = Vector2(341.333, 237.333)
+size = Vector2(372, 337.333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1u5xs"]
 size = Vector2(95, 34)
@@ -38,25 +44,30 @@ size = Vector2(262, 87)
 
 [sub_resource type="Curve2D" id="Curve2D_kumup"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 993, 646, 0, 0, 0, 0, 994, 369)
+"points": PackedVector2Array(0, 0, 0, 0, 841, 943, 0, 0, 0, 0, 844, 706, 0, 0, 0, 0, 796, 627)
 }
-point_count = 2
+point_count = 3
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nc4r5"]
+a = Vector2(88, -2)
+b = Vector2(-104, -1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hwtng")
 
 [node name="player" parent="." instance=ExtResource("1_lu3kv")]
-position = Vector2(583, 330)
+position = Vector2(741, 420)
 speed = 300
 
 [node name="rune_table" type="StaticBody2D" parent="."]
-position = Vector2(1015, 168)
+position = Vector2(674, 172)
 script = ExtResource("2_g1li3")
 metadata/_edit_group_ = true
 
 [node name="table" type="Sprite2D" parent="rune_table"]
 z_index = -1
-texture = ExtResource("2_l0513")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_xtayq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rune_table"]
 position = Vector2(0, 0.5)
@@ -76,10 +87,10 @@ shape = SubResource("RectangleShape2D_xpq5x")
 debug_color = Color(0.647059, 0.454902, 0.67451, 0.419608)
 
 [node name="player_start" type="Marker2D" parent="."]
-position = Vector2(585, 359)
+position = Vector2(743, 448)
 
 [node name="cash_register" type="StaticBody2D" parent="."]
-position = Vector2(121, 475)
+position = Vector2(1266, 129)
 metadata/_edit_group_ = true
 
 [node name="register" type="Sprite2D" parent="cash_register"]
@@ -102,15 +113,16 @@ shape = SubResource("RectangleShape2D_xefip")
 debug_color = Color(0.592157, 0.443137, 0.827451, 0.419608)
 
 [node name="save_station" type="StaticBody2D" parent="."]
-position = Vector2(107, 117)
+position = Vector2(572, 762)
 scale = Vector2(0.75, 0.75)
 metadata/_edit_group_ = true
 
 [node name="save_sprite" type="Sprite2D" parent="save_station"]
-texture = ExtResource("7_2tngb")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_wk25x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="save_station"]
-position = Vector2(3.33333, 2)
+position = Vector2(0.666626, -6.10352e-05)
 shape = SubResource("RectangleShape2D_y6rgg")
 
 [node name="highlight" type="Sprite2D" parent="save_station"]
@@ -121,7 +133,7 @@ texture = ExtResource("5_gmpsj")
 [node name="Area2D" type="Area2D" parent="save_station"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="save_station/Area2D"]
-position = Vector2(48, -10.6667)
+position = Vector2(32.6666, 4.66656)
 shape = SubResource("RectangleShape2D_s0jdf")
 debug_color = Color(0.643137, 0.411765, 0.823529, 0.419608)
 
@@ -135,7 +147,7 @@ ok_button_text = "Save"
 dialog_text = "Would you like to save your game?"
 
 [node name="shop_door" type="StaticBody2D" parent="."]
-position = Vector2(986, 700)
+position = Vector2(1146, 1023)
 metadata/_edit_group_ = true
 
 [node name="door" type="Sprite2D" parent="shop_door"]
@@ -161,16 +173,37 @@ debug_color = Color(0.592157, 0.454902, 0.792157, 0.419608)
 wait_time = 3.0
 
 [node name="NPCPath" type="Path2D" parent="."]
+position = Vector2(1987, 0)
+scale = Vector2(-1, 1)
 curve = SubResource("Curve2D_kumup")
 
 [node name="NPCPathFollow" type="PathFollow2D" parent="NPCPath"]
-position = Vector2(993, 646)
-rotation = -1.56719
+position = Vector2(841, 943)
+rotation = -1.55814
 loop = false
 script = ExtResource("9_fptua")
 runSpeed = 75
 
 [node name="npc" parent="NPCPath/NPCPathFollow" instance=ExtResource("9_vfvce")]
+z_index = 2
+
+[node name="floor" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(939.75, 540.25)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("11_3ey0b")
+
+[node name="counter" type="StaticBody2D" parent="."]
+position = Vector2(1194, 533)
+metadata/_edit_group_ = true
+
+[node name="counter_sprite" type="Sprite2D" parent="counter"]
+position = Vector2(-3.99976, 1)
+scale = Vector2(0.388686, 0.319149)
+texture = ExtResource("12_e6nj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="counter"]
+shape = SubResource("SegmentShape2D_nc4r5")
 
 [connection signal="touching" from="player" to="." method="_on_player_touching"]
 [connection signal="body_entered" from="rune_table/Area2D" to="." method="_on_area_2d_body_entered"]
