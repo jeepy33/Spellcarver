@@ -11,9 +11,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5qt7d")
 
-[node name="Button" type="Button" parent="."]
+[node name="startButton" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Start Game"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="startButton" to="." method="_on_button_pressed"]
