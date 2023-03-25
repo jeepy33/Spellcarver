@@ -13,3 +13,11 @@ func _ready():
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
+
+
+func _on_options_button_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/rune.tscn")
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()
