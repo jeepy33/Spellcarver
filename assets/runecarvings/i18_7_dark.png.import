@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://3rej1all3ile"
+path="res://.godot/imported/i18_7_dark.png-00b31989a1a95766e1159271c5fad876.res"
+
+[deps]
+
+source_file="res://assets/runecarvings/i18_7_dark.png"
+dest_files=["res://.godot/imported/i18_7_dark.png-00b31989a1a95766e1159271c5fad876.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

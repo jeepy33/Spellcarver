@@ -24,7 +24,7 @@ var time = [0,0,1,1,0,0,0,1,0,0,1,1,0,0,0,1,0,1,1,0,0]
 var space = [1,0,1,0,0,0,1,1,0,0,0,1,0,0,1,1,0,0,1,0,0]
 
 # form runes
-var gas = [0,1,0,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,0,0]
+var gas = [0,1,0,0,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,0,0]
 var liquid = [0,1,0,0,1,1,1,0,1,0,1,1,0,0,1,1,0,0,0,0,0]
 var solid = [0,1,0,1,1,1,1,0,1,0,1,1,1,0,1,1,0,1,1,0,0]
 var formless = [1,1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0]
@@ -97,8 +97,12 @@ func check_runes():
 @onready var quad_two = $rune_guide/quadrant_two
 @onready var quad_three = $rune_guide/quadrant_three
 
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print_debug("Ready")
 	for b in quad_zero.get_children():
 		b.pressed.connect(self._on_Button0_toggled.bind(b))
 	for b in quad_one.get_children():
@@ -113,13 +117,17 @@ func _ready():
 func _process(delta):
 	text.text = "0: " + arr_to_string(zero) + "\n1: " + arr_to_string(one) + "\n2: " + arr_to_string(two) + "\n3: " + arr_to_string(three)
 
-func _on_Button0_toggled(which : Button):
+func _on_Button0_toggled(which : TextureButton):
+	#print_debug(int(which.button_pressed))
 	zero[int(which.name.dedent())] = int(which.button_pressed)
-func _on_Button1_toggled(which : Button):
+func _on_Button1_toggled(which : TextureButton):
+	#print_debug(int(which.button_pressed))
 	one[int(which.name.dedent())] = int(which.button_pressed)
-func _on_Button2_toggled(which : Button):
+func _on_Button2_toggled(which : TextureButton):
+	#print_debug(int(which.button_pressed))
 	two[int(which.name.dedent())] = int(which.button_pressed)
-func _on_Button3_toggled(which : Button):
+func _on_Button3_toggled(which : TextureButton):
+	#print_debug(int(which.button_pressed))
 	three[int(which.name.dedent())] = int(which.button_pressed)
 
 func arr_to_string(arr: Array) -> String:
@@ -138,3 +146,4 @@ func arr_sum(arr: Array) -> int:
 func _on_carve_rune_pressed():
 	check_runes()
 	rune_carved.text = arr_to_string(runes)
+

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ceodsw0lu1oph"
+path="res://.godot/imported/i19_11_dark.png-2577f7390b420f50b4224064ce0b59ee.res"
+
+[deps]
+
+source_file="res://assets/runecarvings/i19_11_dark.png"
+dest_files=["res://.godot/imported/i19_11_dark.png-2577f7390b420f50b4224064ce0b59ee.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

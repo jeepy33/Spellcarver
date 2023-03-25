@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cuiruaajuxar"
+path="res://.godot/imported/i11_14_dark.png-223835ed49787e1832eac0390582f91f.res"
+
+[deps]
+
+source_file="res://assets/runecarvings/i11_14_dark.png"
+dest_files=["res://.godot/imported/i11_14_dark.png-223835ed49787e1832eac0390582f91f.res"]
+
+[params]
+
+create_from=1
+threshold=0.5
