@@ -8,7 +8,7 @@ var prompt_dialog = ['Bark Bark! Bark Bark Bark. (The dog appears to be cold)',
 var success_dialog = ['Bark! Bark! Bark! (The dog drops two coins on the floor and prances out)', 
 'Oh my! This is just the thing I needed. Bless your kind heart, dearie. Thank you so much.', 
 'This is exactly what I was looking for! Thank you so much, I\'ll be sure to recommend your store to my customers.',
-'done d']
+'Woah that\'s so cool! I didn\'t know you could do that with magic.']
 var partial_dialog = ['Bark! (The dog drops a coin and walks out)', 
 'Thank you dearie, this will do.', 
 'Thank you, this should work just fine.',
@@ -18,7 +18,7 @@ var failure_dialog = ['Bark...',
 'Hmm, I don\'t think this is going to work for me.',
 'Oh, my friend just wanted me to check out this place. Are you in the college?']
 
-var correct_response = ["Fire Low Intensity", "second", "third", "fourth"]
-var partial_response = ["Fire", 'second_p', 'third_p', 'fourth_p']
+var correct_response = ["Fire Low Potency ", "Water Space ", "Water Solid ", "Air Solid "]
+var partial_response = ["Fire ", 'Water ', 'third_p', 'fourth_p']
 
 var job_desc = ['A dog came wandered into your shop looking a little chilly. Maybe you could make a rune to warm it up?', 'A lady came into your shop asking for watering can that does not get too heavy.', 'A butcher is looking for a rune to prevent his meats from spoiling.', 'What did she even want?']
