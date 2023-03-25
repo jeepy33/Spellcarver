@@ -15,6 +15,10 @@ run/main_scene="res://src/scenes/main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+Global="*res://src/scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=1920

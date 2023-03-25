@@ -51,8 +51,7 @@ shape = SubResource("RectangleShape2D_3n5b1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 position = Vector2(0, 6.66667)
 sprite_frames = SubResource("SpriteFrames_5nh5m")
-animation = &"down"
-frame_progress = 0.824024
+animation = &"up"
 
 [node name="highlight" type="Sprite2D" parent="CollisionShape2D"]
 position = Vector2(6.66666, -82.5803)
