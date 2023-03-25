@@ -31,8 +31,6 @@ func _on_area_2d_body_exited(body):
 	playerLeave.emit()
 	
 
-
-
 func _on_node_2d_leave_npc():
 	$CollisionShape2D/AnimatedSprite2D.animation = 'down'
 	$CollisionShape2D/AnimatedSprite2D.play()
