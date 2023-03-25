@@ -147,3 +147,18 @@ func _on_carve_rune_pressed():
 	check_runes()
 	rune_carved.text = arr_to_string(runes)
 
+
+
+func _on_reset_pressed():
+	for b in quad_zero.get_children():
+		b.button_pressed = false
+	for b in quad_one.get_children():
+		b.button_pressed = false
+	for b in quad_two.get_children():
+		b.button_pressed = false
+	for b in quad_three.get_children():
+		b.button_pressed = false
+	zero = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+	one = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+	two = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+	three = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
