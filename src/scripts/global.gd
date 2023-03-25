@@ -1,4 +1,9 @@
-extends Node2D
+extends Node
+
+var curJob = 0
+
+# set in talkscene, NPCPathFollow, used in npc
+var acceptedJob = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,9 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-func _on_dialog_confirmed():
-	Global.acceptedJob = true
-	Global.curJob += 1
-	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")

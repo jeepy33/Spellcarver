@@ -8,6 +8,8 @@ var taskAvailable
 
 var shopOpen
 
+signal leaveNPC
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$rune_table/highlight.hide()
@@ -32,6 +34,7 @@ func _ready():
 	taskAvailable = false
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("select_object"):
@@ -53,6 +56,12 @@ func _process(delta):
 		print(str("start timer"))
 		$NPCTimer.start()
 		shopOpen = not shopOpen
+	
+	if Global.acceptedJob:
+		$NPCPath.show()
+		#$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = false
+		#$NPCPath/NPCPathFollow/npc/Area2D/CollisionShape2D.disabled = false
+		leaveNPC.emit()
 
 
 
