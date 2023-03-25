@@ -16,7 +16,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if startPath:
-		set_progress(get_progress() + runSpeed * (delta))
+		$npc/CollisionShape2D/AnimatedSprite2D.animation = 'up_' + str(Global.curJob)
+		$npc/CollisionShape2D/AnimatedSprite2D.play()
+		set_progress(get_progress() + runSpeed * (delta - curDelta))
 		$npc.global_position = $npc.global_position
 	else:
 		curDelta = 0
@@ -27,8 +29,10 @@ func _process(delta):
 	if leave:
 		if get_progress_ratio() == 0:
 			leave = false
+			counter = 0
 		elif $npc != null:
-			counter = counter + 0.005
+			print(str(get_progress_ratio()))
+			counter = counter + 0.0025
 			set_progress_ratio(get_progress_ratio() - counter)
 			$npc.global_position = $npc.global_position
 
@@ -37,9 +41,12 @@ func _process(delta):
 func _on_npc_timer_timeout():
 	print(str('timer done'))
 	startPath = true
+	leave = false
+	counter = 0
 
 
 # when the npc is ready to leave, start moving
 func _on_node_2d_leave_npc():
 	set_progress_ratio(1)
+	startPath = false
 	leave = true

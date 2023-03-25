@@ -35,8 +35,8 @@ script = ExtResource("4_4pvd0")
 
 [node name="dialog" type="AcceptDialog" parent="."]
 title = "Character Name"
-position = Vector2i(100, 300)
-size = Vector2i(700, 250)
+position = Vector2i(100, 200)
+size = Vector2i(700, 200)
 visible = true
 unresizable = true
 ok_button_text = "Accept Job"

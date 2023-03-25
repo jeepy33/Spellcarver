@@ -5,17 +5,13 @@ signal playerLeave
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CollisionShape2D/AnimatedSprite2D.animation = 'up'
+	$CollisionShape2D/AnimatedSprite2D.animation = 'up_' + str(Global.curJob)
 	$CollisionShape2D/AnimatedSprite2D.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-# delete object when it leaves the screen
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	queue_free()
 
 
 func _on_npc_path_follow_path_complete():
@@ -28,9 +24,14 @@ func _on_area_2d_body_entered(body):
 		playerEnter.emit()
 
 func _on_area_2d_body_exited(body):
+	print(str('want to leave'))
 	playerLeave.emit()
 	
 
 func _on_node_2d_leave_npc():
-	$CollisionShape2D/AnimatedSprite2D.animation = 'down'
+	var spriteNum = Global.curJob
+	if Global.usePrevSprite:
+		spriteNum -= 1
+		Global.usePrevSprite = false
+	$CollisionShape2D/AnimatedSprite2D.animation = 'down_' + str(spriteNum)
 	$CollisionShape2D/AnimatedSprite2D.play()

@@ -42,6 +42,10 @@ var form = [gas,liquid,solid,formless]
 var tome_contents = [full,fire,low_potency,water]
 
 
+var taskDone = false
+
+var usePrevSprite = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

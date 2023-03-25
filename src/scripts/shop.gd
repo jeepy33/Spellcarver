@@ -7,6 +7,7 @@ var playerInShopDoor
 var taskAvailable
 
 var shopOpen
+var finishJob
 
 signal leaveNPC
 
@@ -47,20 +48,35 @@ func _process(delta):
 			$save_station/ConfirmationDialog.visible = true
 		if playerInShopDoor:
 			print(str("player selected shop door"))
-			shopOpen = not shopOpen
+			if Global.acceptedJob:
+				finishJob = true
+			else:
+				shopOpen = not shopOpen
 		if taskAvailable:
 			print(str("player selected task"))
 			get_tree().change_scene_to_file("res://src/scenes/talkscene.tscn")
 	
 	if shopOpen:
 		print(str("start timer"))
-		$NPCTimer.start()
+		$NPCTimer.set_paused(false)
+		$NPCTimer.start(3)
 		shopOpen = not shopOpen
 	
 	if Global.acceptedJob:
+		print(str('job accepted'))
 		$NPCPath.show()
-		#$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = false
-		#$NPCPath/NPCPathFollow/npc/Area2D/CollisionShape2D.disabled = false
+		leaveNPC.emit()
+		
+	if finishJob:
+		print(str("player wants to finish job"))
+		$NPCTimer.set_paused(false)
+		$NPCTimer.start(2)
+		finishJob = not finishJob
+		Global.acceptedJob = false
+		Global.taskDone = true
+		
+	if Global.usePrevSprite:
+		$NPCPath.show()
 		leaveNPC.emit()
 
 
