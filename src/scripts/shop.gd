@@ -14,7 +14,6 @@ signal leaveNPC
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$rune_table/highlight.hide()
-	$cash_register/highlight.hide()
 	$save_station/highlight.hide()
 	$shop_door/highlight.hide()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D/highlight.hide()
@@ -24,6 +23,8 @@ func _ready():
 	$NPCPath/NPCPathFollow/npc/Area2D/CollisionShape2D.disabled = true
 	
 	$player.start($player_start.position)
+	
+	$money.text = str(Global.player_funds)
 	
 	playerInRuneTable = false
 	playerInCashRegister = false
@@ -41,6 +42,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("select_object"):
 		if playerInRuneTable:
 			print(str("player selected rune"))
+			get_tree().change_scene_to_file("res://src/scenes/rune.tscn")
 		if playerInCashRegister:
 			print(str("player selected cash register"))
 		if playerInSaveStation:
@@ -85,6 +87,7 @@ func _on_area_2d_body_entered(body):
 	if body.get_name() == "player":
 		$rune_table/highlight.show()
 		playerInRuneTable = true
+		
 
 func _on_area_2d_body_exited(body):
 	$rune_table/highlight.hide()

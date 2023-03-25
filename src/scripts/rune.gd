@@ -154,7 +154,20 @@ func arr_sum(arr: Array) -> int:
 
 func _on_carve_rune_pressed():
 	_set_result_runes(check_runes())
-	rune_carved.text = arr_to_string(runes)
+	var strBld = ""
+	if (runes.is_empty()):
+		rune_carved.dialog_text = "Unable to carve a rune..."
+		rune_carved.get_ok_button().disabled = true
+	else:
+		strBld += "Successfully Carved a Rune of " + runes[0]
+		if (runes.size() > 1):
+			for s in runes:
+				strBld += " and " + s
+		rune_carved.dialog_text = strBld
+		rune_carved.get_ok_button().disabled = false
+	rune_carved.visible = true
+		
+	
 
 
 
@@ -270,3 +283,11 @@ func _set_result_runes(r):
 					b.visible = true;
 				else:
 					b.visible = false;
+
+
+func _on_runes_confirmed():
+	pass # Replace with function body.
+
+
+func _on_exit_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
