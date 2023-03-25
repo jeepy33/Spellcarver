@@ -142,7 +142,7 @@ func _on_Button3_toggled(which : TextureButton):
 func arr_to_string(arr: Array) -> String:
 	var s = ""
 	for i in arr:
-		s += str(i) + ", "
+		s += str(i) + " "
 	return s
 	
 func arr_sum(arr: Array) -> int:
@@ -286,7 +286,8 @@ func _set_result_runes(r):
 
 
 func _on_runes_confirmed():
-	pass # Replace with function body.
+	Global.curRune = arr_to_string(runes)
+	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
 
 
 func _on_exit_pressed():
