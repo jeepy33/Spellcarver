@@ -5,17 +5,26 @@ var playerInCashRegister
 var playerInSaveStation
 var playerInShopDoor
 
+var shopOpen
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$rune_table/highlight.hide()
 	$cash_register/highlight.hide()
 	$save_station/highlight.hide()
 	$shop_door/highlight.hide()
+	
+	$NPCPath.hide()
+	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = true
+	
 	$player.start($player_start.position)
+	
 	playerInRuneTable = false
 	playerInCashRegister = false
 	playerInSaveStation = false
 	playerInShopDoor = false
+	
+	shopOpen = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,6 +39,13 @@ func _process(delta):
 			$save_station/ConfirmationDialog.visible = true
 		if playerInShopDoor:
 			print(str("player selected shop door"))
+			shopOpen = not shopOpen
+	
+	if shopOpen:
+		print(str("start timer"))
+		$NPCTimer.start()
+		shopOpen = not shopOpen
+
 
 
 func _on_area_2d_body_entered(body):
@@ -67,3 +83,8 @@ func _on_door_body_entered(body):
 func _on_door_body_exited(body):
 	$shop_door/highlight.hide()
 	playerInShopDoor = false
+
+
+func _on_npc_timer_timeout():
+	$NPCPath.show()
+	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = false
