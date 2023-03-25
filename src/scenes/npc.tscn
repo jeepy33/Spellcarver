@@ -1,11 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5iusm86jg3xn"]
+[gd_scene load_steps=14 format=3 uid="uid://c5iusm86jg3xn"]
 
 [ext_resource type="Script" path="res://src/scripts/npc.gd" id="1_21tjy"]
-[ext_resource type="Texture2D" uid="uid://dtfgf3vsl6cb5" path="res://assets/placeholders/npc_down.png" id="1_c8vwc"]
-[ext_resource type="Texture2D" uid="uid://bmioitsjbl5jq" path="res://assets/placeholders/npc_down_02.png" id="2_2vupi"]
-[ext_resource type="Texture2D" uid="uid://dxy4tkkddidnl" path="res://assets/placeholders/npc_up.png" id="3_pvlyr"]
-[ext_resource type="Texture2D" uid="uid://b0i13172ni5pc" path="res://assets/placeholders/npc_up_02.png" id="4_7w5jk"]
+[ext_resource type="Texture2D" uid="uid://cul1wxu7seupj" path="res://assets/sprites/dog_down.png" id="2_l26ui"]
+[ext_resource type="Texture2D" uid="uid://bl1vcou81lihn" path="res://assets/sprites/oldwoman_down.png" id="3_rf4xf"]
+[ext_resource type="Texture2D" uid="uid://bhvfd7n4l1hfv" path="res://assets/sprites/girls_down.png" id="4_8afsw"]
+[ext_resource type="Texture2D" uid="uid://d1wppy2nl3ehp" path="res://assets/sprites/butcher_down.png" id="5_5eutk"]
+[ext_resource type="Texture2D" uid="uid://ckk0g6ohq58nt" path="res://assets/sprites/dog_up.png" id="6_2kx58"]
+[ext_resource type="Texture2D" uid="uid://bq0ffc7ocy5jx" path="res://assets/sprites/girls_up.png" id="6_10pd8"]
 [ext_resource type="Texture2D" uid="uid://504lui8415nv" path="res://assets/placeholders/task_notif.png" id="6_hlcw3"]
+[ext_resource type="Texture2D" uid="uid://bqtl6txwoxepd" path="res://assets/sprites/butcher_up.png" id="7_1jr3u"]
+[ext_resource type="Texture2D" uid="uid://c618n1xt2guib" path="res://assets/sprites/oldwoman_up.png" id="7_whaad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n5b1"]
 size = Vector2(156, 426)
@@ -14,29 +18,71 @@ size = Vector2(156, 426)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_c8vwc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_2vupi")
+"texture": ExtResource("2_l26ui")
 }],
 "loop": true,
-"name": &"down",
+"name": &"down_0",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_pvlyr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_7w5jk")
+"texture": ExtResource("3_rf4xf")
 }],
 "loop": true,
-"name": &"up",
+"name": &"down_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8afsw")
+}],
+"loop": true,
+"name": &"down_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5eutk")
+}],
+"loop": true,
+"name": &"down_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2kx58")
+}],
+"loop": true,
+"name": &"up_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_whaad")
+}],
+"loop": true,
+"name": &"up_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_10pd8")
+}],
+"loop": true,
+"name": &"up_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1jr3u")
+}],
+"loop": true,
+"name": &"up_3",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjibj"]
-size = Vector2(175, 233)
+size = Vector2(176, 264)
 
 [node name="npc" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -45,13 +91,13 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_3n5b1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
-position = Vector2(0, 6.66667)
+scale = Vector2(0.35, 0.35)
 sprite_frames = SubResource("SpriteFrames_5nh5m")
-animation = &"up"
+animation = &"up_0"
 
 [node name="highlight" type="Sprite2D" parent="CollisionShape2D"]
 position = Vector2(6.66666, -82.5803)
@@ -59,15 +105,12 @@ scale = Vector2(1, 0.657)
 texture = ExtResource("6_hlcw3")
 offset = Vector2(0, -275)
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3.5, -37.5)
+position = Vector2(4, -22)
 shape = SubResource("RectangleShape2D_sjibj")
 debug_color = Color(0.67451, 0.407843, 0.776471, 0.419608)
 
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

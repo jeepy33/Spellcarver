@@ -40,7 +40,7 @@ size = Vector2(262, 87)
 
 [sub_resource type="Curve2D" id="Curve2D_kumup"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 839, 1127, 0, 0, 0, 0, 844, 706, 0, 0, 0, 0, 796, 627)
+"points": PackedVector2Array(0, 0, 0, 0, 838, 1267, 0, 0, 0, 0, 844, 706, 0, 0, 0, 0, 796, 627)
 }
 point_count = 3
 
@@ -166,7 +166,7 @@ shape = SubResource("RectangleShape2D_2y5qp")
 debug_color = Color(0.592157, 0.454902, 0.792157, 0.419608)
 
 [node name="NPCTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="NPCPath" type="Path2D" parent="."]
 position = Vector2(1987, 0)
@@ -174,7 +174,7 @@ scale = Vector2(-1, 1)
 curve = SubResource("Curve2D_kumup")
 
 [node name="NPCPathFollow" type="PathFollow2D" parent="NPCPath"]
-position = Vector2(839, 1127)
+position = Vector2(838, 1267)
 rotation = -1.55814
 rotates = false
 loop = false

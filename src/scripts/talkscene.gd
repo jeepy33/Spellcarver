@@ -1,9 +1,9 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if Global.taskDone:
+		print(str("task is done"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,6 +12,10 @@ func _process(delta):
 
 
 func _on_dialog_confirmed():
-	Global.acceptedJob = true
-	Global.curJob += 1
+	if not Global.taskDone:
+		Global.acceptedJob = true
+	else:
+		Global.taskDone = false
+		Global.curJob += 1
+		Global.usePrevSprite = true
 	get_tree().change_scene_to_file("res://src/scenes/shop.tscn")
