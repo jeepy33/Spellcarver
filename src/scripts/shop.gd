@@ -94,6 +94,7 @@ func _on_door_body_exited(body):
 func _on_npc_timer_timeout():
 	$NPCPath.show()
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D.disabled = false
+	$NPCTimer.paused = true # maybe race condition (probably not?)
 
 func _on_npc_player_enter():
 	$NPCPath/NPCPathFollow/npc/CollisionShape2D/highlight.show()
