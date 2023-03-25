@@ -2,14 +2,20 @@ extends Node2D
 
 var playerInRuneTable
 var playerInCashRegister
+var playerInSaveStation
+var playerInShopDoor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$rune_table/highlight.hide()
 	$cash_register/highlight.hide()
+	$save_station/highlight.hide()
+	$shop_door/highlight.hide()
 	$player.start($player_start.position)
 	playerInRuneTable = false
 	playerInCashRegister = false
+	playerInSaveStation = false
+	playerInShopDoor = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,6 +25,11 @@ func _process(delta):
 			print(str("player selected rune"))
 		if playerInCashRegister:
 			print(str("player selected cash register"))
+		if playerInSaveStation:
+			print(str("player selected save station"))
+			$save_station/ConfirmationDialog.visible = true
+		if playerInShopDoor:
+			print(str("player selected shop door"))
 
 
 func _on_area_2d_body_entered(body):
@@ -38,3 +49,21 @@ func _on_register_body_entered(body):
 func _on_register_body_exited(body):
 	$cash_register/highlight.hide()
 	playerInCashRegister = false
+
+func _on_save_body_entered(body):
+	if body.get_name() == "player":
+		$save_station/highlight.show()
+		playerInSaveStation = true
+	
+func _on_save_body_exited(body):
+	$save_station/highlight.hide()
+	playerInSaveStation = false
+
+func _on_door_body_entered(body):
+	if body.get_name() == "player":
+		$shop_door/highlight.show()
+		playerInShopDoor = true
+
+func _on_door_body_exited(body):
+	$shop_door/highlight.hide()
+	playerInShopDoor = false
