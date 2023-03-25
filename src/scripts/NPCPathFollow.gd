@@ -32,7 +32,7 @@ func _process(delta):
 			counter = 0
 		elif $npc != null:
 			print(str(get_progress_ratio()))
-			counter = counter + 0.005
+			counter = counter + 0.0025
 			set_progress_ratio(get_progress_ratio() - counter)
 			$npc.global_position = $npc.global_position
 

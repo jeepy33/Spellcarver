@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c618n1xt2guib" path="res://assets/sprites/oldwoman_up.png" id="7_whaad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n5b1"]
-size = Vector2(156, 426)
+size = Vector2(156, 285)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5nh5m"]
 animations = [{
@@ -90,14 +90,15 @@ script = ExtResource("1_21tjy")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0, 27.25)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_3n5b1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+position = Vector2(0, -40)
 scale = Vector2(0.35, 0.35)
 sprite_frames = SubResource("SpriteFrames_5nh5m")
-animation = &"up_0"
+animation = &"down_1"
 
 [node name="highlight" type="Sprite2D" parent="CollisionShape2D"]
 position = Vector2(6.66666, -82.5803)
