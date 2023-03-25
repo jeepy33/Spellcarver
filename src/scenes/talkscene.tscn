@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://grshk2c1gqjq"]
+[gd_scene load_steps=8 format=3 uid="uid://84ddkqw1ehl3"]
 
 [ext_resource type="Texture2D" uid="uid://cenv6iff5yqsr" path="res://assets/store/counter.png" id="1_4dhfx"]
 [ext_resource type="Script" path="res://src/scripts/talkscene.gd" id="1_5j3xe"]
